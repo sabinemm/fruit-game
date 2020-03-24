@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Galada&family=Quicksand&display=swap');
 
-
 * {
     box-sizing: border-box;
 }
@@ -39,33 +38,61 @@ body {
 }
 
 .game-container {
-display: grid;
-grid-template-columns: repeat(4, auto);
-grid-gap: 10px;
-margin: 20px;
-justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    margin: 50px;
+    justify-content: center;
+    perspective: 500px;
+  }
 
-}
+/* ------------- CARDS ------------- */
 
 .card {
-    background-color: blanchedalmond;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
     height: 5em;
     width: 5em;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: transform 300ms ease-in-out;
+
 }
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card-back {
+  transform: rotateY(0);
+}
+
+.card-front {
+transform: rotateY(-180deg);
+}
+  
+.card:hover .card-back {
+    transform: rotateY(-180deg);
+  }
+  
+  .card:hover .card-front {
+    transform: rotateY(0)
+  } 
 
 .card-face {
     position: absolute;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: transform 500ms ease-in-out;
+  }
 
-}
-
-.back-img {
+.card-img {
     max-width: 5em;
     max-height: 5em;
-    object-fit: contain;
 }
 
 .zoom {
@@ -74,3 +101,4 @@ justify-content: center;
   
   .zoom:hover {
     transform: scale(1.07);
+  }
