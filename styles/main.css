@@ -7,6 +7,8 @@
 
 html {
     min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 body {
@@ -18,7 +20,9 @@ body {
     color: rgb(0, 0, 0);
     font-family: 'Galada', cursive;
     text-align: center;
-    font-size: 5em;
+    font-size: 3em;
+    margin-block-end: 0;
+
 }
 
 .game-info-container {
@@ -30,7 +34,7 @@ body {
 .game-info {
     font-family: 'Quicksand', sans-serif;
     color: rgb(44, 12, 82);
-    font-size: 3em;
+    font-size: 1.5em;
     
 }
 
@@ -40,17 +44,18 @@ grid-template-columns: repeat(4, auto);
 grid-gap: 10px;
 margin: 20px;
 justify-content: center;
+
 }
 
 .card {
     background-color: blanchedalmond;
-    height: 150px;
-    width: 150px;
+    height: 5em;
+    width: 5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card-face {
     position: absolute;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,13 +63,13 @@ justify-content: center;
 }
 
 .back-img {
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 5em;
+    max-height: 5em;
     object-fit: contain;
 }
 
 .zoom {
-    transition: transform .2s; 
+    transition: transform .2s ease-in-out; 
   }
   
   .zoom:hover {
