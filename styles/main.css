@@ -6,8 +6,6 @@
 
 html {
     min-height: 100vh;
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 body {
@@ -16,11 +14,12 @@ body {
 }
 
 .page-title {
-    color: rgb(0, 0, 0);
+    color: rgb(245, 6, 85);
     font-family: 'Galada', cursive;
     text-align: center;
     font-size: 3em;
     margin-block-end: 0;
+    text-shadow: 2px 2px 4px #a09f9f;
 
 }
 
@@ -41,7 +40,10 @@ body {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 10px;
-    margin: 50px;
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
     justify-content: center;
     perspective: 500px;
   }
