@@ -70,11 +70,11 @@ body {
 transform: rotateY(-180deg);
 }
   
-.card:hover .card-back {
+.card.visible .card-back { /*change to .card:hover to check if it works*/
     transform: rotateY(-180deg);
   }
   
-  .card:hover .card-front {
+  .card.visible .card-front { /*change to .card:hover to check if it works*/
     transform: rotateY(0)
   } 
 
@@ -99,6 +99,43 @@ transform: rotateY(-180deg);
     transition: transform .2s ease-in-out; 
   }
   
-  .zoom:hover {
+.zoom:hover {
     transform: scale(1.07);
+}
+
+  /* ------------- OVERLAYS ------------- */
+
+  .overlay-text {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: rgb(252, 36, 119);
+    font-family: 'Galada', cursive;
+  }
+  
+  .overlay-text-small {
+    font-size: .3em;
+  }
+  
+  .overlay-text.visible {
+    display: flex;
+    flex-direction: column;
+    animation: overlay-grow 500ms forwards;
+  }
+  
+  @keyframes overlay-grow {
+    from {
+      background-color: rgba(0, 0, 0, 0);
+      font-size: 0;
+    }
+    to {
+      background-color: rgba(0, 0, 0, .8);
+      font-size: 5em;
+    }
   }

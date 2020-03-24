@@ -10,6 +10,21 @@
 
 <body>
     <h1 class="page-title">Juicy Fruit</h1>
+
+    <!-- visible class -->
+    <div class="overlay-text visible">
+        Click to Start
+    </div>
+
+    <div id="game-over-text" class="overlay-text">
+        Game Over
+        <span class="overlay-text-small">Click to restart</span>
+    </div>
+
+    <div id="victory-text" class="overlay-text">
+        You are Victorious!
+    </div>
+
     <div class="game-container">
         <div class="game-info-container">
             <div class="game-info">
@@ -21,6 +36,7 @@
         </div>
 
         <div class="card zoom visible">
+            <!-- remove visible to see the other side -->
             <div class="card-back card-face">
                 <img src="https://res.cloudinary.com/www-madine-se/image/upload/v1585045890/fruit_game/cards/card-back_hfitoc.jpg"
                     alt="" class="card-img">
