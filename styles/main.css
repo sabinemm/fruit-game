@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Galada&family=Quicksand&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(0deg, rgba(254,244,249,1) 0%, rgba(241,248,255,1) 100%);
+}
+
+.page-title {
+    color: rgb(0, 0, 0);
+    font-family: 'Galada', cursive;
+    text-align: center;
+    font-size: 5em;
+}
+
+.game-info-container {
+    grid-column:  1 / -1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-info {
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(44, 12, 82);
+    font-size: 3em;
+    
+}
+
+.game-container {
+display: grid;
+grid-template-columns: repeat(4, auto);
+grid-gap: 10px;
+margin: 20px;
+justify-content: center;
+}
+
+.card {
+    background-color: blanchedalmond;
+    height: 150px;
+    width: 150px;
+}
+
+.card-face {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.back-img {
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+.zoom {
+    transition: transform .2s; 
+  }
+  
+  .zoom:hover {
+    transform: scale(1.07);
