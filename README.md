@@ -82,10 +82,14 @@ Below are a list of the programming languages, technologies and frameworks used 
 
 ### Sounds
 
-* Card flip [sound](https://freesound.org/people/f4ngy/sounds/240776/) or [this](http://www.orangefreesounds.com/card-flip-sound-effect/). Will decide later
+* Card flip [sound](http://www.orangefreesounds.com/card-flip-sound-effect/)
 
-* Next level [sound](https://freesound.org/people/Navadaux/sounds/404004/) or [this](https://www.dreamstime.com/royalty-free-sound-effect-next-level-sound-effect-various-projects-next-level-audio120055125)
+* [Matched](https://www.zapsplat.com/music/game-sound-synthesized-bright-pluck-good-for-success-award-or-achievement-1/)
 
-* [Ambience sound?](https://www.zapsplat.com/music/forest-environment-ambience-clearing-spring-summer-birds/)
+// * Next level [sound](https://www.zapsplat.com/music/game-sound-retro-digital-fanfare-level-complete-or-achievement-tone-1/)
 
+* [Background audio](https://www.zapsplat.com/music/forest-environment-ambience-clearing-spring-summer-birds/)
 
+* Victory [sound](https://www.zapsplat.com/music/cartoon-success-fanfare/)
+
+* [Game over](https://www.zapsplat.com/music/game-sound-basic-digital-retro-incorrect-wrong-error-negative-tone-10/)
