@@ -64,6 +64,7 @@ Below are a list of the programming languages, technologies and frameworks used 
 * Adobe Photoshop CC (creating cards)
 * Adobe Illustrator CC (importing & editing fruit vectors)
 * [Cloudinary](https://cloudinary.com/) to store all images
+* [Favicon.io](https://favicon.io/favicon-converter/)
 
 ## Testing
 
