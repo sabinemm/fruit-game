@@ -31,12 +31,6 @@ class AudioController {
         this.victory.play();
     }
 
-    victory() {
-        clearInterval(this.countDown);
-        this.audioController.victory();
-        document.getElementById('victory-text').classList.add('visible');
-    }
-
     gameOver() {
         this.stopMusic();
         this.gameOverSound.play();
@@ -86,9 +80,35 @@ class MixOrMatch {
             this.ticker.innerText = this.totalClicks; //counts them on the page
             card.classList.add('visible'); //ads visible class to the clicked card
 
-            ///if statement to check for a match
-
+            if (this.cardToCheck)
+                this.checkForCardMatch(card)// check for match
+            else
+                this.cardToCheck = card
         }
+    }
+    checkForCardMatch(card) {
+        if (this.getCardType(card) === this.getCardType(this.cardToCheck))
+            this.CardMatch(card, this.cardToCheck);
+        //match
+        else
+            this.cardMisMatch(card, this.cardToCheck);
+    }
+
+    cardMatch(card1, card2) {
+        this.matchedCards.push(card1);
+        this.matchedCards.push(card2);
+        //card1.classList.add('matched');
+        //card2.classList.add('matched');
+        this.audioController.match();
+        if (this.matchedCards.length === this.cardsArray); //if lenght of the matched cards matches the amount of cards in array
+        this.victory();
+    }
+
+    cardMisMatch(card) {
+
+    }
+    getCardType(card) {
+        return card.getElementsByClassName('card-value')[0].src;
     }
 
     startCountDown() {
@@ -98,6 +118,12 @@ class MixOrMatch {
             if (this.timeRemaining === 0)
                 this.gameOver();
         }, 1000); //interval is 1sec
+    }
+
+    victory() {
+        clearInterval(this.countDown);
+        this.audioController.victory();
+        document.getElementById('victory-text').classList.add('visible');
     }
 
     gameOver() {
