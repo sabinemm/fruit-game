@@ -8,6 +8,7 @@ class AudioController {
         //this.levelUpSound = new Audio('assets/audio/level-up.mp3');
         this.victorySound = new Audio('assets/audio/victory.mp3');
         this.gameOver = new Audio('assets/audio/game-over.mp3');
+        this.flipSound.volume = 0.4;
         this.bgMusic.volume = 0.5;
         this.bgMusic.loop = true;
     }
@@ -51,12 +52,29 @@ class MixOrMatch {
         this.timeRemaining = this.totalTime;
         this.matchedCards = []; //empty array
         this.busy = true; //will put false once game is strated
+
+        this.shuffleCards();
     }
     flipCard(card) {
         if (this.canFlipCard(card)) {
             this.audioController.flip();
+            this.totalClicks++; //iterates clicks
+            this.ticker.innerText = this.totalClicks; //counts them on the page
+            card.classList.add('visible'); //ads visible class to the clicked card
+
+            ///if statement to check for a match
+
         }
     }
+
+    shuffleCards() { //fisher and yates algorithm
+        for (let i = this.cardsArray.lenght - 1; i > 0; i--) {
+            let randomIndex = Math.floor(Math.random() * (i + 1));
+            this.cardsArray[randomIndex].style.order = i; //shuffles css grid oder of cards
+            this.cardsArray[1].style.order = randomIndex;
+        }
+    }
+
     canFlipCard(card) {
         return true;
         //check if user is allowed to flip the card

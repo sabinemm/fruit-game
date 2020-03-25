@@ -33,7 +33,6 @@ body {
     font-family: 'Quicksand', sans-serif;
     color: rgb(44, 12, 82);
     font-size: 1.5em;
-    
 }
 
 .game-container {
@@ -51,13 +50,10 @@ body {
 /* ------------- CARDS ------------- */
 
 .card {
-    background-color: rgba(0, 0, 0, 0.2);
     position: relative;
     height: 6em;
     width: 6em;
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: transform 300ms ease-in-out;
-
 }
 
 .card:hover {
@@ -90,6 +86,7 @@ transform: rotateY(-180deg);
     overflow: hidden;
     backface-visibility: hidden;
     transition: transform 500ms ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
 .card-img {
@@ -119,6 +116,7 @@ transform: rotateY(-180deg);
     z-index: 100;
     color: rgb(252, 36, 119);
     font-family: 'Galada', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   }
   
   .overlay-text-small {
@@ -138,7 +136,7 @@ transform: rotateY(-180deg);
     }
     to {
       background-color: rgba(0, 0, 0, .8);
-      font-size: 5em;
+      font-size: 3em;
     }
   }
 
