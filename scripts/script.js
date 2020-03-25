@@ -28,7 +28,7 @@ class AudioController {
     }
     victory() {
         this.stopMusic();
-        this.victory.play();
+        this.victorySound.play();
     }
 
     gameOver() {
@@ -66,6 +66,27 @@ class MixOrMatch {
         this.ticker.innerText = this.totalClicks; //reseting inner timer and inner texts
     }
 
+    startCountDown() {
+        return setInterval(() => {
+            this.timeRemaining--;
+            this.timer.innerText = this.timeRemaining; //updates time in HTML
+            if (this.timeRemaining === 0)
+                this.gameOver();
+        }, 1000); //interval is 1sec
+    }
+    
+    gameOver() {
+        clearInterval(this.countDown);
+        this.audioController.gameOver();
+        document.getElementById('game-over-text').classList.add('visible');
+    }
+    
+    victory() {
+        clearInterval(this.countDown);
+        this.audioController.victory();
+        document.getElementById('victory-text').classList.add('visible');
+    }
+
     hideCards() {
         this.cardsArray.forEach(card => {
             card.classList.remove('visible');
@@ -81,17 +102,20 @@ class MixOrMatch {
             card.classList.add('visible'); //ads visible class to the clicked card
 
             if (this.cardToCheck)
-                this.checkForCardMatch(card)// check for match
+                this.checkForCardMatch(card);// check for match
             else
-                this.cardToCheck = card
+                this.cardToCheck = card;
         }
     }
+
     checkForCardMatch(card) {
-        if (this.getCardType(card) === this.getCardType(this.cardToCheck))
-            this.CardMatch(card, this.cardToCheck);
-        //match
-        else
+        if(this.getCardType(card) === this.getCardType(this.cardToCheck))
+            this.cardMatch(card, this.cardToCheck);
+            //match
+            else 
             this.cardMisMatch(card, this.cardToCheck);
+
+        this.cardToCheck = null;
     }
 
     cardMatch(card1, card2) {
@@ -100,37 +124,24 @@ class MixOrMatch {
         //card1.classList.add('matched');
         //card2.classList.add('matched');
         this.audioController.match();
-        if (this.matchedCards.length === this.cardsArray); //if lenght of the matched cards matches the amount of cards in array
-        this.victory();
+        if(this.matchedCards.length === this.cardsArray.length)
+            this.victory();
     }
 
-    cardMisMatch(card) {
-
+    cardMisMatch(card1, card2) {
+        this.busy = true;
+        setTimeout(() => {
+            card1.classList.remove('visible');
+            card2.classList.remove('visible');
+            this.busy = false;
+        }, 1000);
     }
+
     getCardType(card) {
         return card.getElementsByClassName('card-value')[0].src;
     }
 
-    startCountDown() {
-        return setInterval(() => {
-            this.timeRemaining--;
-            this.timer.innerText = this.timeRemaining; //updates time in HTML
-            if (this.timeRemaining === 0)
-                this.gameOver();
-        }, 1000); //interval is 1sec
-    }
 
-    victory() {
-        clearInterval(this.countDown);
-        this.audioController.victory();
-        document.getElementById('victory-text').classList.add('visible');
-    }
-
-    gameOver() {
-        clearInterval(this.countDown);
-        this.audioController.gameOver();
-        document.getElementById('game-over-text').classList.add('visible');
-    }
 
     shuffleCards() { //fisher and yates algorithm
         for (let i = this.cardsArray.length - 1; i > 0; i--) {
@@ -143,7 +154,7 @@ class MixOrMatch {
     canFlipCard(card) {
         return true;
         //check if user is allowed to flip the card
-        //return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck //does not allow to flip cards that are already flipped, animating or matched
+        return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck //does not allow to flip cards that are already flipped, animating or matched
         // creates a boolean = if thisnotbusy is false and does not include and card does not equal card to check will evaluate to true, because the statement is true
         //so if it returns TRUE the player can flip a card
     }
