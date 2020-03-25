@@ -68,7 +68,7 @@ class MixOrMatch {
     }
 
     shuffleCards() { //fisher and yates algorithm
-        for (let i = this.cardsArray.lenght - 1; i > 0; i--) {
+        for (let i = this.cardsArray.length - 1; i > 0; i--) {
             let randomIndex = Math.floor(Math.random() * (i + 1));
             this.cardsArray[randomIndex].style.order = i; //shuffles css grid oder of cards
             this.cardsArray[1].style.order = randomIndex;
