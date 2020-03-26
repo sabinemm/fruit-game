@@ -1,4 +1,4 @@
-// Sound Control
+// **** Sound Control *****
 
 class AudioController {
     constructor() {
@@ -37,13 +37,16 @@ class AudioController {
     }
 }
 
-// ADDING CARDS
+// **** ADDING CARDS TO DECK ****
 
-const pineapple = `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pinapple_g27ljn.jpg`;
+fruits = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pinapple_g27ljn.jpg`, `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/dragonfruit_jy5sxt.jpg`, `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/dragonfruit_jy5sxt.jpg`];
+
+/* const pineapple = `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pinapple_g27ljn.jpg`;
 const mangosteen = `https://res.cloudinary.com/www-madine-se/image/upload/v1585045890/fruit_game/cards/mangosteen_zbitfe.jpg`;
 const rambutan = `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/rambutan_nq6agc.jpg`;
 const lemon = `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/Lemon_ei9acy.jpg`;
 const dragonFruit = `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/dragonfruit_jy5sxt.jpg`;
+ */
 
 let insertCard = document.getElementById('containerId');
 let cardBase = `<div class="card zoom">
@@ -53,23 +56,28 @@ let cardBase = `<div class="card zoom">
 </div>
 <div class="card-front card-face">
     <img class="card-value card-img"
-        src="${dragonFruit}">
+        src="${fruits[2]}">
 </div>
 </div>`;
 
-insertCard.insertAdjacentHTML('beforeend', cardBase);
+let fruitCard =
+
+    insertCard.insertAdjacentHTML('beforeend', cardBase);
+
+//insertCard.insertAdjacentHTML('beforeend', cardBase);
 
 /* start game with level one
 level one is = card base with pineapple x2
                 card base with mangosteen x2
                 card base with rambutan x2
+                time = 30 sec
                 
                 if all cards are matched >
                 next level
                 else = game over
 */
 
-// Cards
+// ******CARDS*******
 
 class MixOrMatch {
     constructor(totalTime, cards) {
@@ -192,7 +200,7 @@ class MixOrMatch {
     }
 }
 
-// Starts the game only when page is fully loaded
+// *****Starts the game only when page is fully loaded******
 
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
