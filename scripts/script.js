@@ -74,13 +74,13 @@ class MixOrMatch {
                 this.gameOver();
         }, 1000); //interval is 1sec
     }
-    
+
     gameOver() {
         clearInterval(this.countDown);
         this.audioController.gameOver();
         document.getElementById('game-over-text').classList.add('visible');
     }
-    
+
     victory() {
         clearInterval(this.countDown);
         this.audioController.victory();
@@ -109,10 +109,10 @@ class MixOrMatch {
     }
 
     checkForCardMatch(card) {
-        if(this.getCardType(card) === this.getCardType(this.cardToCheck))
+        if (this.getCardType(card) === this.getCardType(this.cardToCheck))
             this.cardMatch(card, this.cardToCheck);
-            //match
-            else 
+        //match
+        else
             this.cardMisMatch(card, this.cardToCheck);
 
         this.cardToCheck = null;
@@ -124,7 +124,7 @@ class MixOrMatch {
         //card1.classList.add('matched');
         //card2.classList.add('matched');
         this.audioController.match();
-        if(this.matchedCards.length === this.cardsArray.length)
+        if (this.matchedCards.length === this.cardsArray.length)
             this.victory();
     }
 
@@ -186,4 +186,17 @@ if (document.readyState === 'loading') { //loads js only after page is fully loa
     ready();
 }
 
-// let audioController = new AudioController();
+// ADDING CARDS
+
+var insertCards = document.getElementById('containerId');
+insertCards.insertAdjacentHTML('beforeend', `<div class="card zoom">
+<div class="card-back card-face">
+    <img src="https://res.cloudinary.com/www-madine-se/image/upload/v1585045890/fruit_game/cards/card-back_hfitoc.jpg"
+        class="card-img">
+</div>
+<div class="card-front card-face">
+    <img class="card-value card-img"
+        src="https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pinapple_g27ljn.jpg">
+</div>
+</div>`);
+

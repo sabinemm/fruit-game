@@ -68,6 +68,7 @@ Below are a list of the programming languages, technologies and frameworks used 
 
 ## Testing
 
+ * [JsHint](https://jshint.com)
 
 ## Credits
 ### Code
