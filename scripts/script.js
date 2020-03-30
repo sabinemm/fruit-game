@@ -39,7 +39,27 @@ class AudioController {
 
 // **** ADDING CARDS TO DECK ****
 
-fruits = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pinapple_g27ljn.jpg`, `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/dragonfruit_jy5sxt.jpg`, `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/dragonfruit_jy5sxt.jpg`];
+const fruits = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/grapefruit_wdcx0h.jpg`,
+    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/mango_vtic6q.jpg`,
+    //   `https://res.cloudinary.com/www-madine-se/image/upload/v1585045887/fruit_game/cards/lychee_tfkj5m.jpg`,
+    //  `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pomegranate_zdesmg.jpg`
+];
+
+duplicate = [...fruits, ...fruits]
+
+let insertCard = document.getElementById('containerId');
+
+duplicate.forEach(
+    (href) => insertCard.insertAdjacentHTML('beforeend', `<div class="card zoom">
+  <div class="card-back card-face">
+      <img src="https://res.cloudinary.com/www-madine-se/image/upload/v1585045890/fruit_game/cards/card-back_hfitoc.jpg"
+          class="card-img">
+  </div> <div class="card-front card-face">
+    <img class="card-value card-img"
+        src="${href}">
+</div>`)
+);
+
 
 /* const pineapple = `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pinapple_g27ljn.jpg`;
 const mangosteen = `https://res.cloudinary.com/www-madine-se/image/upload/v1585045890/fruit_game/cards/mangosteen_zbitfe.jpg`;
@@ -48,7 +68,7 @@ const lemon = `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888
 const dragonFruit = `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/dragonfruit_jy5sxt.jpg`;
  */
 
-let insertCard = document.getElementById('containerId');
+/* let insertCard = document.getElementById('containerId');
 let cardBase = `<div class="card zoom">
 <div class="card-back card-face">
     <img src="https://res.cloudinary.com/www-madine-se/image/upload/v1585045890/fruit_game/cards/card-back_hfitoc.jpg"
@@ -58,11 +78,7 @@ let cardBase = `<div class="card zoom">
     <img class="card-value card-img"
         src="${fruits[2]}">
 </div>
-</div>`;
-
-let fruitCard =
-
-    insertCard.insertAdjacentHTML('beforeend', cardBase);
+</div>`; */
 
 //insertCard.insertAdjacentHTML('beforeend', cardBase);
 
