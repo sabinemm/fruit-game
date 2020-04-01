@@ -66,16 +66,19 @@ duplicate.forEach(
 </div>`)
 );
 
-
 /* start game with level one
 level one is = card base with pineapple x2
                 card base with mangosteen x2
                 card base with rambutan x2
                 time = 30 sec
                 
-                if all cards are matched >
+                if all cards are matched 
                 next level
                 else = game over
+                next level = + 2 values in array + 20 sec
+
+                final level 
+                if win - victory
 */
 
 // ******CARDS*******
@@ -120,6 +123,12 @@ class MixOrMatch {
         clearInterval(this.countDown);
         this.audioController.gameOver();
         document.getElementById('game-over-text').classList.add('visible');
+    }
+
+    levelUp() {
+        clearInterval(this.countDown);
+        this.audioController.levelUp();
+        document.getElementById('level-up-text').classList.add('visible');
     }
 
     victory() {
@@ -182,8 +191,6 @@ class MixOrMatch {
         return card.getElementsByClassName('card-value')[0].src;
     }
 
-
-
     shuffleCards() { //fisher and yates algorithm
         for (let i = this.cardsArray.length - 1; i > 0; i--) {
             let randomIndex = Math.floor(Math.random() * (i + 1));
@@ -206,7 +213,7 @@ class MixOrMatch {
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new MixOrMatch(60, cards);  //change 100 to 5 to test faster
+    let game = new MixOrMatch(60, cards);  //game time
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
