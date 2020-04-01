@@ -44,14 +44,16 @@ class AudioController {
 }
 
 // **** ADDING CARDS TO DECK ****
-
+//const fruitNames = ['banana', 'mangosteen', 'pineapple', 'orange']
 const fruits = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/grapefruit_wdcx0h.jpg`,
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/mango_vtic6q.jpg`,
-    //   `https://res.cloudinary.com/www-madine-se/image/upload/v1585045887/fruit_game/cards/lychee_tfkj5m.jpg`,
-    //  `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pomegranate_zdesmg.jpg`
+    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045887/fruit_game/cards/lychee_tfkj5m.jpg`,
+    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pomegranate_zdesmg.jpg`
 ];
 
-duplicate = [...fruits, ...fruits]
+//let currentLevel = localStorage.getItem('currentLevel');
+
+let duplicate = [...fruits, ...fruits]
 
 let insertCard = document.getElementById('containerId');
 
@@ -107,6 +109,8 @@ class MixOrMatch {
         this.hideCards();
         this.timer.innerText = this.timeRemaining;
         this.ticker.innerText = this.totalClicks; //reseting inner timer and inner texts
+        this.currentLevel = parseInt(localStorage.getItem('currentLevel'));
+        console.log('currentLevel', this.currentLevel);
     }
 
     startCountDown() {
@@ -128,6 +132,8 @@ class MixOrMatch {
         clearInterval(this.countDown);
         this.audioController.levelUp();
         document.getElementById('level-up-text').classList.add('visible');
+        console.log(this.currentLevel);
+        localStorage.setItem('currentLevel', this.currentLevel + 1)
     }
 
     victory() {
@@ -150,10 +156,11 @@ class MixOrMatch {
             this.ticker.innerText = this.totalClicks; //counts them on the page
             card.classList.add('visible'); //ads visible class to the clicked card
 
-            if (this.cardToCheck)
+            if (this.cardToCheck) {
                 this.checkForCardMatch(card);// check for match
-            else
+            } else {
                 this.cardToCheck = card;
+            }
         }
     }
 
@@ -218,6 +225,7 @@ function ready() {
         overlay.addEventListener('click', () => {
             overlay.classList.remove('visible'); //starts game whenever clicked on overlay
             game.startGame();
+            localStorage.setItem('currentLevel', 1);
         });
     });
     cards.forEach(card => {
