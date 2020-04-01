@@ -67,18 +67,17 @@ duplicate.forEach(
 );
 
 /* start game with level one
-level one is = card base with pineapple x2
-                card base with mangosteen x2
-                card base with rambutan x2
+                level one is = whatever is in html
                 time = 30 sec
                 
                 if all cards are matched 
-                next level
+                next level (level+1)
                 else = game over
-                next level = + 2 values in array + 20 sec
+                next level = push 2 values in fruits array + 20 sec
 
                 final level 
                 if win - victory
+                else = game over
 */
 
 // ******CARDS*******
@@ -175,7 +174,7 @@ class MixOrMatch {
         //card2.classList.add('matched');
         this.audioController.match();
         if (this.matchedCards.length === this.cardsArray.length)
-            this.victory();
+            this.levelUp();
     }
 
     cardMisMatch(card1, card2) {

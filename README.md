@@ -21,7 +21,7 @@ Goals to be achieved of this website:
 
 * Create a playable game
 * Simple and straightforward use
-* Be able to have levels with varying difficulty levels
+* Play through varying difficulty levels
 * Ability to play the game on different sized screens
 
 I got rather lucky finding the perfect free fruit vectors as it took seconds of googling when I'm always very picky about the images I choose.
@@ -43,8 +43,9 @@ Future features
 * Optional feature to send end score of the game to your email
 * Several levels
 * Mobile friendly (cards strething accordingly across different screens)
+* Pause game
 * "Are you sure you want to give up?" popup when trying to close the page mid game
-* Tropical ambience sound that can be turned on and off with a button
+* On and off button for background music
 
 ## Technologies used
 
@@ -75,6 +76,7 @@ Below are a list of the programming languages, technologies and frameworks used 
 
 * HTML and CSS part of the [tutorial](https://www.youtube.com/watch?v=3uuQ3g92oPQ) 
 * Javascript [tutorial](https://youtu.be/28VfzEiJgy4) 
+* [StackOverflow](https://stackoverflow.com/questions/60885320/inserts-a-div-and-a-link-into-the-div-twice-and-does-this-with-several-links-js)
 
 ### Images
 
