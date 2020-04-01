@@ -5,10 +5,11 @@ class AudioController {
         this.bgMusic = new Audio('assets/audio/bgAudio.mp3');
         this.flipSound = new Audio('assets/audio/Card-flip-sound-effect.mp3');
         this.matchSound = new Audio('assets/audio/matched.mp3');
-        //this.levelUpSound = new Audio('assets/audio/level-up.mp3');
+        this.levelUpSound = new Audio('assets/audio/level-up.mp3');
         this.victorySound = new Audio('assets/audio/victory.mp3');
         this.gameOverSound = new Audio('assets/audio/game-over.mp3');
         this.gameOverSound.volume = 0.5;
+        this.levelUpSound.volume = 0.5;
         this.flipSound.volume = 0.4;
         this.bgMusic.volume = 0.2;
         this.bgMusic.loop = true;
@@ -26,6 +27,11 @@ class AudioController {
     match() {
         this.matchSound.play();
     }
+
+    levelUp() {
+        this.levelUpSound.play()
+    }
+
     victory() {
         this.stopMusic();
         this.victorySound.play();
@@ -60,27 +66,6 @@ duplicate.forEach(
 </div>`)
 );
 
-
-/* const pineapple = `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pinapple_g27ljn.jpg`;
-const mangosteen = `https://res.cloudinary.com/www-madine-se/image/upload/v1585045890/fruit_game/cards/mangosteen_zbitfe.jpg`;
-const rambutan = `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/rambutan_nq6agc.jpg`;
-const lemon = `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/Lemon_ei9acy.jpg`;
-const dragonFruit = `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/dragonfruit_jy5sxt.jpg`;
- */
-
-/* let insertCard = document.getElementById('containerId');
-let cardBase = `<div class="card zoom">
-<div class="card-back card-face">
-    <img src="https://res.cloudinary.com/www-madine-se/image/upload/v1585045890/fruit_game/cards/card-back_hfitoc.jpg"
-        class="card-img">
-</div>
-<div class="card-front card-face">
-    <img class="card-value card-img"
-        src="${fruits[2]}">
-</div>
-</div>`; */
-
-//insertCard.insertAdjacentHTML('beforeend', cardBase);
 
 /* start game with level one
 level one is = card base with pineapple x2
@@ -221,7 +206,7 @@ class MixOrMatch {
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new MixOrMatch(100, cards);  //change 100 to 5 to test faster
+    let game = new MixOrMatch(60, cards);  //change 100 to 5 to test faster
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
