@@ -128,7 +128,7 @@ If you wish to run this code locally:
 * HTML and CSS part of the [tutorial](https://www.youtube.com/watch?v=28VfzEiJgy4) 
 * Javascript [tutorial](https://www.youtube.com/watch?v=3uuQ3g92oPQ) 
 * [StackOverflow](https://stackoverflow.com/questions/60885320/inserts-a-div-and-a-link-into-the-div-twice-and-does-this-with-several-links-js)
-* Big thanks to my mentor [Maranatha Ilesanmi](https://github.com/mbilesanmi) for helping me with setting up local storage for levels and guiding me through the whole process.
+* [Maranatha Ilesanmi](https://github.com/mbilesanmi) helping me with setting up local storage for levels 
 
 ### Images
 
@@ -136,7 +136,7 @@ If you wish to run this code locally:
 * [Back of the card pattern](https://www.freepik.com/free-vector/hand-drawn-fruit-mobile-pattern_3069263.htm#page=1&query=fruits&position=38)
 * [Individual fruits](https://www.freepik.com/free-vector/tropical-fruits-retro-cartoon-icons-set_3791458.htm#page=2&query=fruits++mango&position=15)
 
-### Sounds
+### Audio
 
 * [Card flip](http://www.orangefreesounds.com/card-flip-sound-effect/)
 * [Matched](https://www.zapsplat.com/music/game-sound-synthesized-bright-pluck-good-for-success-award-or-achievement-1/)
@@ -146,5 +146,6 @@ If you wish to run this code locally:
 * [Background audio](https://www.zapsplat.com/music/forest-environment-ambience-clearing-spring-summer-birds/)
 
 ### Acknowledgements
-* I was initally tempted to create a Snakes and Ladders game. I had downloaded one version of it on my Ipad and found it to be poorly made. As it would be too difficult for me to create at this point and found a great tutorial by [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) for memory game and decided to go with it.
-* Big thanks to my mentor [Maranatha Ilesanmi](https://github.com/mbilesanmi) for helping and guiding me through the whole process of developing this game. 
+I was initally tempted to create a Snakes and Ladders game. I had downloaded one version of it on my Ipad and found it to be poorly made. As it would be too difficult for me to create at this point and found a great tutorial by [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) for memory game and decided to go with it.
+
+Big thanks to my mentor [Maranatha Ilesanmi](https://github.com/mbilesanmi) for helping and guiding me through the whole process of developing this game. 
