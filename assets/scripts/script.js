@@ -18,7 +18,7 @@ class AudioController {
         this.bgMusic.play()
     }
     stopMusic() {
-        this.bgMusic.pause(); //restarts music to beginning after pausing
+        this.bgMusic.pause(); //restarts music to beginning after pause
         this.bgMusic.currentTime = 0;
     }
     flip() {
@@ -225,7 +225,7 @@ function ready() {
         overlay.addEventListener('click', () => {
             overlay.classList.remove('visible'); //starts game whenever clicked on overlay
             game.startGame();
-            localStorage.setItem('currentLevel', 1);
+            localStorage.setItem('currentLevel', 1); // saves level
         });
     });
     cards.forEach(card => {
