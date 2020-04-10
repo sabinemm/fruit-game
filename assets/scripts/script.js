@@ -1,5 +1,6 @@
 // **** Sound Control *****
 
+//constructor Pascal notation
 class AudioController {
     constructor() {
         this.bgMusic = new Audio('assets/audio/bgAudio.mp3');
@@ -44,7 +45,7 @@ class AudioController {
 }
 
 // **** ADDING CARDS TO DECK ****
-//const fruitNames = ['banana', 'mangosteen', 'pineapple', 'orange']
+
 const fruits = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/grapefruit_wdcx0h.jpg`,
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/mango_vtic6q.jpg`,
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045887/fruit_game/cards/lychee_tfkj5m.jpg`,
@@ -68,12 +69,14 @@ duplicate.forEach(
 </div>`)
 );
 
-/* start game with level one
-                level one is = whatever is in html
+
+/* start game with level one = current level
                 time = 30 sec
                 
                 if all cards are matched 
-                next level (level+1)
+                level +1 
+                next level = push 2 values in fruits array + 20 sec
+
                 else = game over
                 next level = push 2 values in fruits array + 20 sec
 
@@ -214,7 +217,7 @@ class MixOrMatch {
     }
 }
 
-// *****Starts the game only when page is fully loaded******
+// ***** Starts the game only when page is fully loaded ******
 
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
