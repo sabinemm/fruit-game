@@ -56,7 +56,7 @@ const level2 = [`https://res.cloudinary.com/www-madine-se/image/upload/v15850458
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/lime_zmqva1.jpg`
 ]
 
-//rūtas code
+//rūtas code snippet to solve adding cards on next level
 const levels = {
     1: level1,
     2: level2,
@@ -99,9 +99,9 @@ class MixOrMatch {
                 this.flipCard(card); //whenever clicked on a card
             });
         });
+
         this.cardsArray = cards;
     }
-
 
     startGame() {
         this.cardToCheck = null; //gets called multiple times e.g. when restarting the game
@@ -144,8 +144,9 @@ class MixOrMatch {
         this.audioController.levelUp();
         document.getElementById('level-up-text').classList.add('visible');
         console.log(this.currentLevel);
-        localStorage.setItem('currentLevel', this.currentLevel + 1)
-        this.startGame()
+        localStorage.setItem('currentLevel', this.currentLevel + 1);
+        this.startGame();
+        this.shuffleCards();
     }
 
     victory() {
@@ -179,24 +180,20 @@ class MixOrMatch {
     checkForCardMatch(card) {
         if (this.getCardType(card) === this.getCardType(this.cardToCheck)) {
             this.cardMatch(card, this.cardToCheck);
+            console.log("matched");
             //match
         } else
             this.cardMisMatch(card, this.cardToCheck);
-
+        console.log("mismatched");   ///matched and mismatched at the same time???
         this.cardToCheck = null;
     }
 
-    cardMatch(card1, card2) {            //?????????????????????? problem child
-        if (card1 === card2) {
-            this.matchedCards.push(card1);
-            this.matchedCards.push(card2);
-            this.audioController.match();
-            console.log(655456456)
-            if (this.matchedCards.length === this.cardsArray.length) {
-                console.log(222)
-                this.levelUp();
-            }
-        }
+    cardMatch(card1, card2) {
+        this.matchedCards.push(card1);
+        this.matchedCards.push(card2);
+        this.audioController.match();
+        if (this.matchedCards.length === this.cardsArray.length)
+            this.levelUp();
     }
 
     cardMisMatch(card1, card2) {
@@ -252,5 +249,6 @@ if (document.readyState === 'loading') { //loads js only after page is fully loa
     ready();
 }
 
+//localStorage.clear();
 
-
+//sessionStorage.clear();
