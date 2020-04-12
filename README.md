@@ -129,7 +129,7 @@ If you wish to run this code locally:
 * Javascript [tutorial](https://www.youtube.com/watch?v=3uuQ3g92oPQ) 
 * [StackOverflow](https://stackoverflow.com/questions/60885320/inserts-a-div-and-a-link-into-the-div-twice-and-does-this-with-several-links-js)
 * [Maranatha Ilesanmi](https://github.com/mbilesanmi) helping me with setting up local storage for levels 
-
+* My friend Rūta with helping me to put cards in the constructor and hinting me towards the right things to do
 ### Images
 
 * [Fruit composition](https://www.freepik.com/free-vector/tropical-fruits-4-colorful-compositions-set_3791460.htm#page=2&query=fruits++mango&position=34)

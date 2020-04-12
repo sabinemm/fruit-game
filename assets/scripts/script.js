@@ -56,15 +56,11 @@ const level2 = [`https://res.cloudinary.com/www-madine-se/image/upload/v15850458
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/lime_zmqva1.jpg`
 ]
 
+//rūtas code
 const levels = {
     1: level1,
     2: level2,
 }
-
-
-
-
-
 
 // ******CARDS*******
 
@@ -96,6 +92,7 @@ class MixOrMatch {
                 src="${href}">
         </div>`)
         );
+
         let cards = Array.from(document.getElementsByClassName('card'));
         cards.forEach(card => {
             card.addEventListener('click', () => {
@@ -104,6 +101,8 @@ class MixOrMatch {
         });
         this.cardsArray = cards;
     }
+
+
     startGame() {
         this.cardToCheck = null; //gets called multiple times e.g. when restarting the game
         this.totalClicks = 0;
@@ -187,15 +186,16 @@ class MixOrMatch {
         this.cardToCheck = null;
     }
 
-    cardMatch(card1, card2) {
-        this.matchedCards.push(card1);
-        this.matchedCards.push(card2);
-        this.audioController.match();
-        if (this.matchedCards.length === this.cardsArray.length) {
-
-
-            console.log(222)
-            this.levelUp();
+    cardMatch(card1, card2) {            //?????????????????????? problem child
+        if (card1 === card2) {
+            this.matchedCards.push(card1);
+            this.matchedCards.push(card2);
+            this.audioController.match();
+            console.log(655456456)
+            if (this.matchedCards.length === this.cardsArray.length) {
+                console.log(222)
+                this.levelUp();
+            }
         }
     }
 
