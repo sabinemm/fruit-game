@@ -1,6 +1,5 @@
 // **** Sound Control *****
 
-//constructor Pascal notation
 class AudioController {
     constructor() {
         this.bgMusic = new Audio('assets/audio/bgAudio.mp3');
@@ -77,7 +76,7 @@ class MixOrMatch {
     createCards() {
         const level = parseInt(localStorage.getItem('currentLevel')) || 1;
 
-        let duplicate = [...levels[level], ...levels[level]]; //level2??
+        let duplicate = [...levels[level], ...levels[level]]; //level3?? //rūtas tip
 
         let insertCard = document.getElementById('containerId');
 
@@ -217,7 +216,6 @@ class MixOrMatch {
     }
 
     canFlipCard(card) {
-        //return true;
         //check if user is allowed to flip the card
         return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck; //does not allow to flip cards that are already flipped, animating or matched
         // creates a boolean = if thisnotbusy is false and does not include and card does not equal card to check will evaluate to true, because the statement is true
@@ -225,12 +223,16 @@ class MixOrMatch {
     }
 }
 
-// ***** Starts the game only when page is fully loaded ******
+// ***** Reloads the page when clicked on Game Over overlay ******
+
+function refreshPage() {
+    window.location.reload();
+}
 
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     //let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new MixOrMatch(5);  //game time
+    let game = new MixOrMatch(60);  //game time
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
@@ -239,15 +241,12 @@ function ready() {
             localStorage.setItem('currentLevel', 1); // saves level
         });
     });
-
 }
 
-if (document.readyState === 'loading') { //loads js only after page is fully loaded
+// ***** Starts the game only when page is fully loaded ******
+
+if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', ready());
 } else {
     ready();
 }
-
-//localStorage.clear();
-
-//sessionStorage.clear();

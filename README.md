@@ -6,11 +6,9 @@
 ***[Play me](https://sabinemm.github.io/fruit-game/)***
 
 ## Purpose
-
 The aim of this project was to create and build a single page application - playable game that that increases in complexity over the course of the game and challenges the players memory.
 
 ## UX 
-
 Starting with a desktop first approach I created a very basic wireframe. [Wireframe and notes](https://res.cloudinary.com/www-madine-se/image/upload/v1585001794/fruit_game/Untitled_Artwork_2_zccka0.jpg) from first mentor call. I did not find the need to create any more detailed mockups and wireframes because the design is so simple. 
 
 The design of this page is clean and fresh. I used neutral colors for the background and the back of the cards so the user can concentrate on the front of the cards which have different pastel backgrounds and the fruits are in rich colors. 
@@ -27,7 +25,6 @@ Goals to be achieved of this website:
 I got rather lucky finding the perfect free fruit vectors. It took only a few minutes of googling. I'm always very picky about the images I choose so finding them so fast was surprising.
 
 ## Features
-
 Features of this website are:
 * Game starts with a "Click to start" overlay
 * The cards sligthy increase in size when hovered over
@@ -41,7 +38,6 @@ Features of this website are:
 * "Victory" overlay appears when the game is finished with an option to click to restart 
 
 ###  Future features
-
 - [ ] Optional feature to send end score of the game to your email
 - [ ] Several levels
 - [ ] Mobile friendly (cards strething accordingly across different screens)
@@ -50,7 +46,6 @@ Features of this website are:
 - [ ] On and off button for background music
 
 ## Technologies used
-
 Below are a list of the programming languages, technologies and frameworks used for this website.
 
 * HTML5
@@ -72,7 +67,6 @@ Below are a list of the programming languages, technologies and frameworks used 
 * [Favicon.io](https://favicon.io/favicon-converter/)
 
 ## Testing
-
 * [HTML validator](https://validator.w3.org/#validate_by_input)
 * [CSS validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 * [JsHint](https://jshint.com)
@@ -101,23 +95,20 @@ Devices and platforms used for testing:
     - Chrome
 
 ### Manual testing
-
 1. Clicking on overlay over the whole page
 2. Turning all cards, clicking on all cards fast
 
 ### Errors
-
 1.  ***NOT YET RESOLVED*** The first error I encountered was with Safari (on all devices) while turning cards. [Click here to see video](https://res.cloudinary.com/www-madine-se/video/upload/v1585779094/fruit_game/safari-error-fruit-game_am8yt1.mov). During the animation of card turning it glitches and half of the other side is visible during animation. I added -webkit- to transform styles but it did not solve the issue.  
 2. Resolved. Deployed website on Github pages opened on Safari sometimes lets match not actually matching cards. 
 3.  ***NOT YET RESOLVED***  Reaching level two, cards duplicate function called twice.
 3. ***NOT YET RESOLVED*** When failing with time running out, game moves on to the next level. 
+3. ***NOT YET RESOLVED*** too many papayas on level 2. 
 
 ## Deployment
-
 The website was made by creating and new repository in Github, copying [web url](https://github.com/sabinemm/fruit-game.git) and cloned with built in Git control in Visual Studio Code. Git was used for version control and pushed to a repository [hosted](https://sabinemm.github.io/fruit-game/) on Github pages. 
 
 ### How to deploy code locally
-
 If you wish to run this code locally: 
 
 * Download or clone the code from the Github [repository](https://github.com/sabinemm/fruit-game.git)
@@ -126,20 +117,19 @@ If you wish to run this code locally:
 
 ## Credits
 ### Code
-
 * HTML and CSS part of the [tutorial](https://www.youtube.com/watch?v=28VfzEiJgy4) 
 * Javascript [tutorial](https://www.youtube.com/watch?v=3uuQ3g92oPQ) 
 * [StackOverflow](https://stackoverflow.com/questions/60885320/inserts-a-div-and-a-link-into-the-div-twice-and-does-this-with-several-links-js)
 * [Maranatha Ilesanmi](https://github.com/mbilesanmi) helping me with setting up local storage for levels 
 * My friend Rūta with helping me to put cards in the constructor and hinting me towards the right things to do
-### Images
+* [OnClick refresh](https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click)
 
+### Images
 * [Fruit composition](https://www.freepik.com/free-vector/tropical-fruits-4-colorful-compositions-set_3791460.htm#page=2&query=fruits++mango&position=34)
 * [Back of the card pattern](https://www.freepik.com/free-vector/hand-drawn-fruit-mobile-pattern_3069263.htm#page=1&query=fruits&position=38)
 * [Individual fruits](https://www.freepik.com/free-vector/tropical-fruits-retro-cartoon-icons-set_3791458.htm#page=2&query=fruits++mango&position=15)
 
 ### Audio
-
 * [Card flip](http://www.orangefreesounds.com/card-flip-sound-effect/)
 * [Matched](https://www.zapsplat.com/music/game-sound-synthesized-bright-pluck-good-for-success-award-or-achievement-1/)
 * [Level up](https://www.zapsplat.com/music/advance-award-or-other-positive-game-tone-plucked-nylon-style-sound-1//)
