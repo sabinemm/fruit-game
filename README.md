@@ -108,7 +108,9 @@ Devices and platforms used for testing:
 ### Errors
 
 1.  ***NOT YET RESOLVED*** The first error I encountered was with Safari (on all devices) while turning cards. [Click here to see video](https://res.cloudinary.com/www-madine-se/video/upload/v1585779094/fruit_game/safari-error-fruit-game_am8yt1.mov). During the animation of card turning it glitches and half of the other side is visible during animation. I added -webkit- to transform styles but it did not solve the issue.  
-2.  ***NOT YET RESOLVED*** Deployed website on Github pages opened on Safari sometimes lets match not actually matching cards. 
+2. Resolved. Deployed website on Github pages opened on Safari sometimes lets match not actually matching cards. 
+3.  ***NOT YET RESOLVED***  Reaching level two, cards duplicate function called twice.
+3. ***NOT YET RESOLVED*** When failing with time running out, game moves on to the next level. 
 
 ## Deployment
 

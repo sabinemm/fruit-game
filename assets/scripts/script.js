@@ -16,7 +16,7 @@ class AudioController {
         this.bgMusic.loop = true;
     }
     startMusic() {
-        this.bgMusic.play()
+        this.bgMusic.play();
     }
     stopMusic() {
         this.bgMusic.pause(); //restarts music to beginning after pause
@@ -30,7 +30,7 @@ class AudioController {
     }
 
     levelUp() {
-        this.levelUpSound.play()
+        this.levelUpSound.play();
     }
 
     victory() {
@@ -54,13 +54,13 @@ const level1 = [`https://res.cloudinary.com/www-madine-se/image/upload/v15850458
 
 const level2 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/papaya_s1gxcm.jpg`,
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/lime_zmqva1.jpg`
-]
+];
 
 //rūtas code snippet to solve adding cards on next level
 const levels = {
     1: level1,
     2: level2,
-}
+};
 
 // ******CARDS*******
 
@@ -78,7 +78,7 @@ class MixOrMatch {
     createCards() {
         const level = parseInt(localStorage.getItem('currentLevel')) || 1;
 
-        let duplicate = [...levels[level], ...levels[level]]
+        let duplicate = [...levels[level], ...levels[level]];
 
         let insertCard = document.getElementById('containerId');
 
@@ -112,7 +112,7 @@ class MixOrMatch {
 
         setTimeout(() => {
             this.audioController.startMusic();
-            console.log(1111)
+            console.log(1111);
             this.shuffleCards();
             this.countDown = this.startCountDown();
             this.busy = false;
@@ -202,7 +202,7 @@ class MixOrMatch {
             card1.classList.remove('visible');
             card2.classList.remove('visible');
             this.busy = false;
-        }, 1000);
+        }, 800);
     }
 
     getCardType(card) {
@@ -218,9 +218,9 @@ class MixOrMatch {
     }
 
     canFlipCard(card) {
-        return true;
+        //return true;
         //check if user is allowed to flip the card
-        return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck //does not allow to flip cards that are already flipped, animating or matched
+        return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck; //does not allow to flip cards that are already flipped, animating or matched
         // creates a boolean = if thisnotbusy is false and does not include and card does not equal card to check will evaluate to true, because the statement is true
         //so if it returns TRUE the player can flip a card
     }
@@ -244,7 +244,7 @@ function ready() {
 }
 
 if (document.readyState === 'loading') { //loads js only after page is fully loaded
-    document.addEventListener('DOMContentLoaded', ready())
+    document.addEventListener('DOMContentLoaded', ready());
 } else {
     ready();
 }
