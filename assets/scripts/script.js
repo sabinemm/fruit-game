@@ -46,55 +46,63 @@ class AudioController {
 
 // **** ADDING CARDS TO DECK ****
 
-const fruits = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/grapefruit_wdcx0h.jpg`,
+const level1 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/grapefruit_wdcx0h.jpg`,
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/mango_vtic6q.jpg`,
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045887/fruit_game/cards/lychee_tfkj5m.jpg`,
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pomegranate_zdesmg.jpg`
 ];
 
-//let currentLevel = localStorage.getItem('currentLevel');
+const level2 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/papaya_s1gxcm.jpg`,
+    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/lime_zmqva1.jpg`
+]
 
-let duplicate = [...fruits, ...fruits]
-
-let insertCard = document.getElementById('containerId');
-
-duplicate.forEach(
-    (href) => insertCard.insertAdjacentHTML('beforeend', `<div class="card zoom">
-  <div class="card-back card-face">
-      <img src="https://res.cloudinary.com/www-madine-se/image/upload/v1585045890/fruit_game/cards/card-back_hfitoc.jpg"
-          class="card-img">
-  </div> <div class="card-front card-face">
-    <img class="card-value card-img"
-        src="${href}">
-</div>`)
-);
+const levels = {
+    1: level1,
+    2: level2,
+}
 
 
-/* start game with level one = current level
-                time = 30 sec
-                
-                if all cards are matched 
-                level +1 
-                next level = push 2 values in fruits array + 20 sec
 
-                else = game over
-                next level = push 2 values in fruits array + 20 sec
 
-                final level 
-                if win - victory
-                else = game over
-*/
+
 
 // ******CARDS*******
 
 class MixOrMatch {
-    constructor(totalTime, cards) {
-        this.cardsArray = cards;
+    constructor(totalTime) {
+        this.cardsArray = [];
         this.totalTime = totalTime;
         this.timeRemaining = totalTime;
         this.timer = document.getElementById('time-remaining');
         this.ticker = document.getElementById('flips');
         this.audioController = new AudioController();
+        this.currentLevel = parseInt(localStorage.getItem('currentLevel'));
+    }
+
+    createCards() {
+        const level = parseInt(localStorage.getItem('currentLevel')) || 1;
+
+        let duplicate = [...levels[level], ...levels[level]]
+
+        let insertCard = document.getElementById('containerId');
+
+        duplicate.forEach(
+            (href) => insertCard.insertAdjacentHTML('beforeend', `<div class="card zoom">
+        <div class="card-back card-face">
+            <img src="https://res.cloudinary.com/www-madine-se/image/upload/v1585045890/fruit_game/cards/card-back_hfitoc.jpg"
+                class="card-img">
+        </div> <div class="card-front card-face">
+            <img class="card-value card-img"
+                src="${href}">
+        </div>`)
+        );
+        let cards = Array.from(document.getElementsByClassName('card'));
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                this.flipCard(card); //whenever clicked on a card
+            });
+        });
+        this.cardsArray = cards;
     }
     startGame() {
         this.cardToCheck = null; //gets called multiple times e.g. when restarting the game
@@ -105,6 +113,7 @@ class MixOrMatch {
 
         setTimeout(() => {
             this.audioController.startMusic();
+            console.log(1111)
             this.shuffleCards();
             this.countDown = this.startCountDown();
             this.busy = false;
@@ -112,8 +121,8 @@ class MixOrMatch {
         this.hideCards();
         this.timer.innerText = this.timeRemaining;
         this.ticker.innerText = this.totalClicks; //reseting inner timer and inner texts
-        this.currentLevel = parseInt(localStorage.getItem('currentLevel'));
-        console.log('currentLevel', this.currentLevel);
+
+        this.createCards()
     }
 
     startCountDown() {
@@ -137,6 +146,7 @@ class MixOrMatch {
         document.getElementById('level-up-text').classList.add('visible');
         console.log(this.currentLevel);
         localStorage.setItem('currentLevel', this.currentLevel + 1)
+        this.startGame()
     }
 
     victory() {
@@ -180,11 +190,13 @@ class MixOrMatch {
     cardMatch(card1, card2) {
         this.matchedCards.push(card1);
         this.matchedCards.push(card2);
-        //card1.classList.add('matched');
-        //card2.classList.add('matched');
         this.audioController.match();
-        if (this.matchedCards.length === this.cardsArray.length)
+        if (this.matchedCards.length === this.cardsArray.length) {
+
+
+            console.log(222)
             this.levelUp();
+        }
     }
 
     cardMisMatch(card1, card2) {
@@ -221,8 +233,8 @@ class MixOrMatch {
 
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
-    let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new MixOrMatch(60, cards);  //game time
+    //let cards = Array.from(document.getElementsByClassName('card'));
+    let game = new MixOrMatch(60);  //game time
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
@@ -231,11 +243,7 @@ function ready() {
             localStorage.setItem('currentLevel', 1); // saves level
         });
     });
-    cards.forEach(card => {
-        card.addEventListener('click', () => {
-            game.flipCard(card); //whenever clicked on a card
-        });
-    });
+
 }
 
 if (document.readyState === 'loading') { //loads js only after page is fully loaded
