@@ -24,6 +24,7 @@ class AudioController {
     flip() {
         this.flipSound.play();
     }
+
     match() {
         this.matchSound.play();
     }
@@ -50,8 +51,10 @@ const level1 = [`https://res.cloudinary.com/www-madine-se/image/upload/v15850458
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045887/fruit_game/cards/lychee_tfkj5m.jpg`,
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pomegranate_zdesmg.jpg`
 ];
-const level2 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/papaya_s1gxcm.jpg`];
-const level3 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/lime_zmqva1.jpg`];
+const level2 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/papaya_s1gxcm.jpg`,
+    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/lime_zmqva1.jpg`];
+const level3 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045890/fruit_game/cards/mangosteen_zbitfe.jpg`,
+    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pinapple_g27ljn.jpg`];
 
 //rūtas code snippet to solve adding cards on next level
 const levels = {
@@ -76,7 +79,7 @@ class MixOrMatch {
     createCards() {
         const level = parseInt(localStorage.getItem('currentLevel')) || 1;
 
-        let duplicate = [...levels[level], ...levels[level]]; //level3?? //rūtas tip
+        let duplicate = [...levels[level], ...levels[level]]; //level3?? //rūtas tip// too many papayas
 
         let insertCard = document.getElementById('containerId');
 
@@ -100,6 +103,7 @@ class MixOrMatch {
 
         this.cardsArray = cards;
     }
+    // if for every level? for cards instead?
 
     startGame() {
         this.cardToCheck = null; //gets called multiple times e.g. when restarting the game
