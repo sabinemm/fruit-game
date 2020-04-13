@@ -48,11 +48,12 @@ class AudioController {
 
 const level1 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/grapefruit_wdcx0h.jpg`,
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/mango_vtic6q.jpg`,
-    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045887/fruit_game/cards/lychee_tfkj5m.jpg`,
-    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pomegranate_zdesmg.jpg`
+    //`https://res.cloudinary.com/www-madine-se/image/upload/v1585045887/fruit_game/cards/lychee_tfkj5m.jpg`,
+    //`https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pomegranate_zdesmg.jpg`
 ];
 const level2 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/papaya_s1gxcm.jpg`,
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/lime_zmqva1.jpg`];
+
 const level3 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045890/fruit_game/cards/mangosteen_zbitfe.jpg`,
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pinapple_g27ljn.jpg`];
 
@@ -95,6 +96,7 @@ class MixOrMatch {
         );
 
         let cards = Array.from(document.getElementsByClassName('card'));
+
         cards.forEach(card => {
             card.addEventListener('click', () => {
                 this.flipCard(card); //whenever clicked on a card
@@ -147,8 +149,6 @@ class MixOrMatch {
         document.getElementById('level-up-text').classList.add('visible');
         console.log(this.currentLevel);
         localStorage.setItem('currentLevel', this.currentLevel + 1);
-        this.startGame();
-        this.shuffleCards();
     }
 
     victory() {

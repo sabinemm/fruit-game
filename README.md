@@ -102,8 +102,9 @@ Devices and platforms used for testing:
 1.  ***NOT YET RESOLVED*** The first error I encountered was with Safari (on all devices) while turning cards. [Click here to see video](https://res.cloudinary.com/www-madine-se/video/upload/v1585779094/fruit_game/safari-error-fruit-game_am8yt1.mov). During the animation of card turning it glitches and half of the other side is visible during animation. I added -webkit- to transform styles but it did not solve the issue.  
 2. Resolved. Deployed website on Github pages opened on Safari sometimes lets match not actually matching cards. 
 3.  ***NOT YET RESOLVED***  Reaching level two, cards duplicate function called twice.
-3. ***NOT YET RESOLVED*** When failing with time running out, game moves on to the next level. 
-3. ***NOT YET RESOLVED*** too many papayas on level 2. 
+4. ***NOT YET RESOLVED*** When failing with time running out, game moves on to the next level. 
+5. Fixed. Too many papayas on level 2. 
+6. ***NOT YET RESOLVED*** Duplicated on level 3 from level 2.
 
 ## Deployment
 The website was made by creating and new repository in Github, copying [web url](https://github.com/sabinemm/fruit-game.git) and cloned with built in Git control in Visual Studio Code. Git was used for version control and pushed to a repository [hosted](https://sabinemm.github.io/fruit-game/) on Github pages. 

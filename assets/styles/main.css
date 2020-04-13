@@ -135,6 +135,7 @@ transform: rotateY(-180deg);
     font-family: 'Galada', cursive;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
   }
   
   .overlay-text-small {
