@@ -78,7 +78,7 @@ class MixOrMatch {
     }
 
     createCards() {
-        const level = parseInt(localStorage.getItem('currentLevel')) || 1;
+        const level = parseInt(localStorage.getItem('currentLevel')) || 0;
 
         let duplicate = [...levels[level], ...levels[level]]; //level3?? //rūtas tip// too many papayas
 
