@@ -55,6 +55,7 @@ Below are a list of the programming languages, technologies and frameworks used 
 * Visual Studio Code + Live Server
 * Git
 * Github
+* Github pages
 * Markdown (README.md file)
 * [Google Fonts](https://fonts.google.com)
 * Google Chrome developer tools

@@ -29,7 +29,7 @@ class AudioController {
         this.matchSound.play();
     }
 
-    levelUp() {
+    levelUpPing() {
         this.levelUpSound.play();
     }
 
@@ -78,7 +78,7 @@ class MixOrMatch {
     }
 
     createCards() {
-        const level = parseInt(localStorage.getItem('currentLevel')) || 0;
+        const level = parseInt(localStorage.getItem('currentLevel')) || 1;
 
         let duplicate = [...levels[level], ...levels[level]]; //level3?? //rūtas tip// too many papayas
 
@@ -106,6 +106,7 @@ class MixOrMatch {
         this.cardsArray = cards;
     }
     // if for every level? for cards instead?
+
 
     startGame() {
         this.cardToCheck = null; //gets called multiple times e.g. when restarting the game
@@ -145,7 +146,7 @@ class MixOrMatch {
 
     levelUp() {
         clearInterval(this.countDown);
-        this.audioController.levelUp();
+        this.audioController.levelUpPing();
         document.getElementById('level-up-text').classList.add('visible');
         console.log(this.currentLevel);
         localStorage.setItem('currentLevel', this.currentLevel + 1);
