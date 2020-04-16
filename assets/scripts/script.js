@@ -11,7 +11,7 @@ class AudioController {
         this.gameOverSound.volume = 0.5;
         this.levelUpSound.volume = 0.5;
         this.flipSound.volume = 0.4;
-        this.bgMusic.volume = 0.2;
+        this.bgMusic.volume = 0;
         this.bgMusic.loop = true;
     }
     startMusic() {
@@ -78,7 +78,7 @@ class MixOrMatch {
     }
 
     createCards() {
-        const level = parseInt(localStorage.getItem('currentLevel')) || 1;
+        const level = parseInt(localStorage.getItem('currentLevel')) // || 1;
 
         let duplicate = [...levels[level], ...levels[level]]; //level3?? //rūtas tip// too many papayas
 
@@ -126,6 +126,7 @@ class MixOrMatch {
         this.timer.innerText = this.timeRemaining;
         this.ticker.innerText = this.totalClicks; //reseting inner timer and inner texts
 
+        localStorage.setItem('currentLevel', 1); // saves level
         this.createCards()
     }
 
@@ -136,6 +137,7 @@ class MixOrMatch {
             if (this.timeRemaining === 0)
                 this.gameOver();
         }, 1000); //interval is 1sec
+
     }
 
     gameOver() {
@@ -148,8 +150,8 @@ class MixOrMatch {
         clearInterval(this.countDown);
         this.audioController.levelUpPing();
         document.getElementById('level-up-text').classList.add('visible');
-        console.log(this.currentLevel);
         localStorage.setItem('currentLevel', this.currentLevel + 1);
+        console.log(this.currentLevel);
     }
 
     victory() {
@@ -218,6 +220,7 @@ class MixOrMatch {
             this.cardsArray[randomIndex].style.order = i; //shuffles css grid oder of cards
             this.cardsArray[1].style.order = randomIndex;
         }
+
     }
 
     canFlipCard(card) {
@@ -243,7 +246,7 @@ function ready() {
         overlay.addEventListener('click', () => {
             overlay.classList.remove('visible'); //starts game whenever clicked on overlay
             game.startGame();
-            localStorage.setItem('currentLevel', 1); // saves level
+            //localStorage.setItem('currentLevel', 1); // saves level
         });
     });
 }
