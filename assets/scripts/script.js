@@ -47,8 +47,10 @@ class AudioController {
 function mute() {
     if (document.getElementById("mute-id").classList.contains('fa-volume-mute')) {
         document.getElementById("mute-id").classList.toggle('fa-volume-up');
+        // startMusic()
     } else {
         document.getElementById("mute-id").classList.toggle('fa-volume-mute');
+        // stopMusic()
     };
 }
 
@@ -76,6 +78,7 @@ const levels = {
     3: level3,
     4: level4,
 };
+
 
 // ******CARDS*******
 
@@ -234,7 +237,6 @@ class MixOrMatch {
             this.cardsArray[randomIndex].style.order = i; //shuffles css grid oder of cards
             this.cardsArray[1].style.order = randomIndex;
         }
-
     }
 
     canFlipCard(card) {
@@ -243,7 +245,21 @@ class MixOrMatch {
         // creates a boolean = if thisnotbusy is false and does not include and card does not equal card to check will evaluate to true, because the statement is true
         //so if it returns TRUE the player can flip a card
     }
+
+
+
+    /*     mutedFun() {
+            let muted = document.getElementById("mute-id").addEventListener("click", mute);
+            mute()
+            if (document.getElementById("mute-id").classList.contains('fa-volume-mute')) {
+                document.getElementById("mute-id").classList.toggle('fa-volume-up');
+            } else {
+                document.getElementById("mute-id").classList.toggle('fa-volume-mute');
+            };
+        } */
 }
+
+
 
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
@@ -273,3 +289,4 @@ if (document.readyState === 'loading') {
 function refreshPage() {
     window.location.reload();
 }
+
