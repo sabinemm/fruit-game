@@ -42,8 +42,16 @@ class AudioController {
         this.stopMusic();
         this.gameOverSound.play();
     }
+
 }
 
+function mute() {
+    if (document.getElementById("mute-id").classList.contains('fa-volume-mute')) {
+        document.getElementById("mute-id").classList.toggle('fa-volume-up')
+    } else {
+        document.getElementById("mute-id").classList.toggle('fa-volume-mute')
+    };
+}
 // **** ADDING CARDS TO DECK ****
 
 const level1 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/grapefruit_wdcx0h.jpg`,
