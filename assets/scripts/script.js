@@ -126,7 +126,7 @@ class MixOrMatch {
         this.timer.innerText = this.timeRemaining;
         this.ticker.innerText = this.totalClicks; //reseting inner timer and inner texts
 
-        localStorage.setItem('currentLevel', 1); // saves level
+        //localStorage.setItem('currentLevel', 1); // saves level
         this.createCards()
     }
 
@@ -249,6 +249,7 @@ function ready() {
             //localStorage.setItem('currentLevel', 1); // saves level
         });
     });
+    localStorage.setItem('currentLevel', 1); // saves level
 }
 
 // ***** Starts the game only when page is fully loaded ******
