@@ -47,21 +47,26 @@ class AudioController {
 // **** ADDING CARDS TO DECK ****
 
 const level1 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/grapefruit_wdcx0h.jpg`,
-    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/mango_vtic6q.jpg`,
-    //`https://res.cloudinary.com/www-madine-se/image/upload/v1585045887/fruit_game/cards/lychee_tfkj5m.jpg`,
-    //`https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pomegranate_zdesmg.jpg`
-];
+    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/dragonfruit_jy5sxt.jpg`,
+    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pomegranate_zdesmg.jpg`,
+    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/Lemon_ei9acy.jpg`];
+
 const level2 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/papaya_s1gxcm.jpg`,
-    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/lime_zmqva1.jpg`];
+    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/kiwi_ocu5gh.jpg`];
 
 const level3 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045890/fruit_game/cards/mangosteen_zbitfe.jpg`,
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pinapple_g27ljn.jpg`];
+
+const level4 = [,
+    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045887/fruit_game/cards/lychee_tfkj5m.jpg`,
+    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/mango_vtic6q.jpg`,]
 
 //rūtas code snippet to solve adding cards on next level
 const levels = {
     1: level1,
     2: level2,
     3: level3,
+    4: level4,
 };
 
 // ******CARDS*******
