@@ -11,7 +11,7 @@ class AudioController {
         this.gameOverSound.volume = 0.5;
         this.levelUpSound.volume = 0.5;
         this.flipSound.volume = 0.4;
-        this.bgMusic.volume = 0;
+        this.bgMusic.volume = 1;
         this.bgMusic.loop = true;
     }
     startMusic() {
@@ -177,6 +177,12 @@ class MixOrMatch {
         document.getElementById('victory-text').classList.add('visible');
     }
 
+    /*     finishedGame() {
+            if (this.currentLevel = 2) {
+                this.victory()
+            }
+        } */
+
     hideCards() {
         this.cardsArray.forEach(card => {
             card.classList.remove('visible');
@@ -247,16 +253,17 @@ class MixOrMatch {
     }
 
 
+    mutedFun() {
+        document.getElementById('containerId').addEventListener('click', () => { this.mute(); });
+        mute()
+        if (document.getElementById("mute-id").classList.contains('fa-volume-mute')) {
+            document.getElementById("mute-id").classList.toggle('fa-volume-up');
+        } else {
+            document.getElementById("mute-id").classList.toggle('fa-volume-mute');
+            this.audioController.match();
+        };
 
-    /*     mutedFun() {
-            let muted = document.getElementById("mute-id").addEventListener("click", mute);
-            mute()
-            if (document.getElementById("mute-id").classList.contains('fa-volume-mute')) {
-                document.getElementById("mute-id").classList.toggle('fa-volume-up');
-            } else {
-                document.getElementById("mute-id").classList.toggle('fa-volume-mute');
-            };
-        } */
+    }
 }
 
 
@@ -289,4 +296,3 @@ if (document.readyState === 'loading') {
 function refreshPage() {
     window.location.reload();
 }
-
