@@ -151,6 +151,7 @@ class MixOrMatch {
         this.audioController.levelUpPing();
         document.getElementById('level-up-text').classList.add('visible');
         localStorage.setItem('currentLevel', this.currentLevel + 1);
+        this.currentLevel = this.currentLevel + 1;
         console.log(this.currentLevel);
     }
 
@@ -231,12 +232,6 @@ class MixOrMatch {
     }
 }
 
-// ***** Reloads the page when clicked on Game Over overlay ******
-
-function refreshPage() {
-    window.location.reload();
-}
-
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     //let cards = Array.from(document.getElementsByClassName('card'));
@@ -249,6 +244,7 @@ function ready() {
             //localStorage.setItem('currentLevel', 1); // saves level
         });
     });
+
     localStorage.setItem('currentLevel', 1); // saves level
 }
 
@@ -258,4 +254,9 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', ready());
 } else {
     ready();
+}
+// ***** Reloads the page when clicked on Game Over overlay ******
+
+function refreshPage() {
+    window.location.reload();
 }

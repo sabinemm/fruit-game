@@ -121,7 +121,7 @@ transform: rotateY(-180deg);
 
   /* ------------- OVERLAYS ------------- */
 
-  .overlay-text {
+.overlay-text {
     display: none;
     position: fixed;
     top: 0;
@@ -168,3 +168,14 @@ transform: rotateY(-180deg);
         align-items: center;
         }
   } 
+
+ /* ------------- Floating button ------------- */
+
+.float-button {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    color: rgba(0, 0, 0, .5);
+    text-align:center;
+    text-shadow: 2px 2px 3px #999;
+  }
