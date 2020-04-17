@@ -78,7 +78,7 @@ class MixOrMatch {
     }
 
     createCards() {
-        const level = parseInt(localStorage.getItem('currentLevel')) // || 1;
+        const level = parseInt(localStorage.getItem('currentLevel')); // || 1;
 
         let duplicate = [...levels[level], ...levels[level]]; //level3?? //rūtas tip// too many papayas
 
@@ -127,7 +127,7 @@ class MixOrMatch {
         this.ticker.innerText = this.totalClicks; //reseting inner timer and inner texts
 
         //localStorage.setItem('currentLevel', 1); // saves level
-        this.createCards()
+        this.createCards();
     }
 
     startCountDown() {
