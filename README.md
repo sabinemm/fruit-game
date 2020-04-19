@@ -1,7 +1,7 @@
 # JUICY FRUIT MEMORY GAME
 ## Interactive Front-end Web Development Project
 
-***Add demo GIF here***
+![JuicyFruitGame](https://res.cloudinary.com/www-madine-se/image/upload/v1587327312/fruit_game/JuicyCombo_kn64cx.png)
 
 ***[Play me](https://sabinemm.github.io/fruit-game/)***
 

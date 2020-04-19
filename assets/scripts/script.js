@@ -98,7 +98,7 @@ class MixOrMatch {
         duplicate.forEach(
             (href) => insertCard.insertAdjacentHTML('beforeend', `<div class="card zoom">
         <div class="card-back card-face">
-            <img src="https://res.cloudinary.com/www-madine-se/image/upload/v1585045890/fruit_game/cards/card-back_hfitoc.jpg"
+            <img src="https://res.cloudinary.com/www-madine-se/image/upload/v1587330036/fruit_game/cards/card-back3_vy5epc.jpg"
                 class="card-img">
         </div> <div class="card-front card-face">
             <img class="card-value card-img"
