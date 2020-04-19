@@ -183,6 +183,7 @@ class MixOrMatch {
             }
         } */
 
+
     victorious() {
         clearInterval(this.countDown);
         this.audioController.victory();
@@ -259,13 +260,19 @@ class MixOrMatch {
     }
 
     mute() {
-        let muteButton = document.getElementById('muteId');
+        let muteButton = document.getElementById('floatButton');
 
-        if (this.muteButton.addEventListener) {
-            this.muteButton.addEventListener("click", () => {
-                console.log("Button clicked.");
-            });
-        }
+        /*         if (this.muteButton.addEventListener) {
+                    this.muteButton.addEventListener("click", () => {
+                        console.log("Button clicked.");
+                    });
+                } */
+
+        /*         this.muteButton.forEach(muteButton => {
+                    this.muteButton.addEventListener('click', () => {
+                        console.log("mute function")
+                    });
+                }); */
 
         /*  this.muteButton.addEventListener('click', () => {
      this.audioController.match();
@@ -279,7 +286,8 @@ class MixOrMatch {
                 }); */
     }
 }
-// ***** Starts the game only when page is fully loaded ******
+
+// ***** Starts the game  ******
 
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
@@ -290,7 +298,6 @@ function ready() {
         overlay.addEventListener('click', () => {
             overlay.classList.remove('visible'); //starts game whenever clicked on overlay
             game.startGame();
-            //localStorage.setItem('currentLevel', 1); // saves level
         });
     });
 
