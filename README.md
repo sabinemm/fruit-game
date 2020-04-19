@@ -17,6 +17,8 @@ Play the game</a></p>
   - [Wireframes](#Wireframes)
   - [Design](#Design)
 - [**Features**](#Features)
+    - [Functionality](#Functionality)
+    - [Existing features](#Existing-features)
     - [Future features](#Future-features)
 - [**Technologies used**](#Technologies-used)
 - [**Testing**](#Testing)
@@ -30,8 +32,8 @@ Play the game</a></p>
 - [**Acknowledgements**](#Acknowledgements)
 ## About
 
-The purpose of this project was to create and build a single page application - classical card matching game that that increases in complexity over the course of the game and challenges the players memory.
-You can read more about Concentration game visiting [Wikipedia](https://en.wikipedia.org/wiki/Concentration_(card_game)) page.
+The purpose of this project was to create and build a single page application - classical card matching game that that increases in complexity over the course of the game. It requires observation, concentration and a good memory to win. The game is also known as Concentration, Pelmanism, Shinkei-suijaku, Pexeso and Pairs.
+You can read more about Concentration game visiting [Wikipedia](https://en.wikipedia.org/wiki/Concentration_(card_game)) page and the rules of a classic table card game [here](https://www.classicgamesandpuzzles.com/Memory.html).
 
 I could choose between 3 different projects and chose to create a memory game because my goal is to learn more about animation and logic. I learned a lot during this project e.g. how to use classes and constructors. Also, I realised my weak areas that require improvement e.g. understanding scope and algorithms. 
 
@@ -43,10 +45,15 @@ Goals to be achieved of this website:
 
 * Create a playable game
 * Simple and straightforward use
+* The object of the game is to collect the most matching card pairs.
 * Play through varying difficulty levels
 * Ability to play the game on different sized screens
 
 ### Research
+
+To understand the game, I researched existing versions of the game. This gave me a clear idea what functionality and design my version of the game will have.
+
+Most versions had square or rectangular cards. Many versions of the game had extremely colorful clashing patterns that distract the player from memorizing the cards. This is my reasoning why I chose the particular design.
 
 ### Wireframes
 Starting with a desktop first approach I created a very basic wireframe. [Wireframe and notes](https://res.cloudinary.com/www-madine-se/image/upload/v1585001794/fruit_game/Untitled_Artwork_2_zccka0.jpg) from first mentor call. I did not find the need to create any more detailed mockups and wireframes because the design is so simple.
@@ -54,12 +61,16 @@ Starting with a desktop first approach I created a very basic wireframe. [Wirefr
 ### Design
 The design of this page is clean and fresh. I used neutral colors for the background and the back of the cards so the user can concentrate on the front of the cards which have different pastel backgrounds and the fruits are in rich colors. 
 
-To create the cards I created a Photoshop file with numerous artboards and imported the back of the card and the individual fruit vectors. Then added pastel backgrounds in different tones. The  screenshot of initial card design can be found [here](https://res.cloudinary.com/www-madine-se/image/upload/v1585001211/fruit_game/Screenshot_2020-03-23_at_21.49.36_gvqbya.png).
+To create the cards I created a Photoshop file with numerous artboards and imported the back of the card and the individual fruit vectors. Then added pastel backgrounds in different tones. The screenshot of initial card design can be found [here](https://res.cloudinary.com/www-madine-se/image/upload/v1585001211/fruit_game/Screenshot_2020-03-23_at_21.49.36_gvqbya.png).
+
+I adjusted the brightness of [back](https://res.cloudinary.com/www-madine-se/image/upload/v1587330036/fruit_game/cards/card-back3_vy5epc.jpg) of the cards and created [game title](https://res.cloudinary.com/www-madine-se/image/upload/v1587327312/fruit_game/JuicyCombo_kn64cx.png) with fruit and transparent background later on in the project using AI and PS.
 
 I got rather lucky finding the perfect free fruit vectors. It took only a few minutes of googling. I'm always very picky about the images I choose so finding them so fast was surprising.
 
-
 ## Features
+### Functionality
+
+###  Existing features
 Features of this website are:
 * Game starts with a "Click to start" overlay
 * The cards sligthy increase in size when hovered over
@@ -74,11 +85,11 @@ Features of this website are:
 
 ###  Future features
 - [ ] Optional feature to send end score of the game to your email
-- [ ] Several levels
+- [x] Several levels
 - [ ] Mobile friendly (cards strething accordingly across different screens)
 - [ ] Pause game
 - [ ] "Are you sure you want to give up?" popup if trying to close the page mid game
-- [ ] On and off button for background music
+- [x] On and off button for background music
 
 ## Technologies used
 Below are a list of the programming languages, technologies and frameworks used for this website.
