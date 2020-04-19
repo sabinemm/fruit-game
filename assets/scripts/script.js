@@ -44,21 +44,25 @@ class AudioController {
     }
 }
 
-function mute() {
-    if (document.getElementById("mute-id").classList.contains('fa-volume-mute')) {
+/* function mute() {
+
+    /*     if (document.getElementById("mute-id").classList.contains('fa-volume-up')) {
+            document.getElementById("mute-id").classList.toggle('fa-volume-mute');
+            console.log("mute")
+        }; */
+
+/*     if (document.getElementById("mute-id").classList.contains('fa-volume-mute')) {
+        console.log("vol up")
         document.getElementById("mute-id").classList.toggle('fa-volume-up');
-        // startMusic()
-    } else {
-        document.getElementById("mute-id").classList.toggle('fa-volume-mute');
-        // stopMusic()
-    };
-}
+    }
+    document.getElementById('muteId').addEventListener('click', () => { this.mute(); });
+} */
 
 // **** ADDING CARDS TO DECK ****
 
 const level1 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/grapefruit_wdcx0h.jpg`,
-    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/dragonfruit_jy5sxt.jpg`,
-    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pomegranate_zdesmg.jpg`,
+    //`https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/dragonfruit_jy5sxt.jpg`,
+    //`https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pomegranate_zdesmg.jpg`,
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/Lemon_ei9acy.jpg`];
 
 const level2 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/papaya_s1gxcm.jpg`,
@@ -78,6 +82,7 @@ const levels = {
     3: level3,
     4: level4,
 };
+
 
 
 // ******CARDS*******
@@ -171,17 +176,18 @@ class MixOrMatch {
         console.log(this.currentLevel);
     }
 
-    victory() {
+    /*     stopGame() {
+            if (localStorage.setItem('currentLevel') === 2) {
+                console.log("reached lvl2");
+                this.victorious();
+            }
+        } */
+
+    victorious() {
         clearInterval(this.countDown);
         this.audioController.victory();
         document.getElementById('victory-text').classList.add('visible');
     }
-
-    /*     finishedGame() {
-            if (this.currentLevel = 2) {
-                this.victory()
-            }
-        } */
 
     hideCards() {
         this.cardsArray.forEach(card => {
@@ -253,20 +259,17 @@ class MixOrMatch {
     }
 
 
-    mutedFun() {
-        document.getElementById('containerId').addEventListener('click', () => { this.mute(); });
-        mute()
-        if (document.getElementById("mute-id").classList.contains('fa-volume-mute')) {
-            document.getElementById("mute-id").classList.toggle('fa-volume-up');
-        } else {
-            document.getElementById("mute-id").classList.toggle('fa-volume-mute');
-            this.audioController.match();
-        };
-
-    }
+    /*     muteF() {
+            document.getElementById('muteId').addEventListener('click', () => { this.mute(); });
+            mute()
+            if (document.getElementById("mute-id").classList.contains('fa-volume-mute')) {
+                console.log("vol up")
+                document.getElementById("mute-id").classList.toggle('fa-volume-up');
+            }
+        } */
 }
 
-
+// ***** Starts the game only when page is fully loaded ******
 
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
