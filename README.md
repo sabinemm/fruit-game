@@ -1,30 +1,44 @@
 # JUICY FRUIT MEMORY GAME
-## Interactive Front-end Web Development Project
+#### Code Institute Interactive Front-end Web Development Project
 
 <p align="center">
   <img width="40%" src="https://res.cloudinary.com/www-madine-se/image/upload/v1587327312/fruit_game/JuicyCombo_kn64cx.png">
 </p>
 
 <p align="center"><a href="https://sabinemm.github.io/fruit-game/">
-Play game</a></p>
+Play the game</a></p>
 
-<details>
-<summary>Table of contents</summary>
+## Table of Contents
 
-</details>
-<p href="#tith">tith</p>
+- [**About**](#About)
+- [**UX**](#UX)
+  - [Goals](#Goals)
+  - [Research](#Research)
+  - [Wireframes](#Wireframes)
+  - [Design](#Design)
+- [**Features**](#Features)
+    - [Future features](#Future-features)
+- [**Technologies used**](#Technologies-used)
+- [**Testing**](#Testing)
+    - [Manual testing](#Testing)
+    - [Errors](#Errors)
+- [**Deployment**](#Deployment)
+- [**Credits**](#Deployment)
+    - [Code](#Code)
+     - [Images](#Images)
+     - [Audio](#Audio)
+- [**Acknowledgements**](#Acknowledgements)
+## About
 
-## <a name="tith"></a> Purpose {#header2}
+The purpose of this project was to create and build a single page application - classical card matching game that that increases in complexity over the course of the game and challenges the players memory.
+You can read more about Concentration game visiting [Wikipedia](https://en.wikipedia.org/wiki/Concentration_(card_game)) page.
 
-The aim of this project was to create and build a single page application - playable game that that increases in complexity over the course of the game and challenges the players memory.
+I could choose between 3 different projects and chose to create a memory game because my goal is to learn more about animation and logic. I learned a lot during this project e.g. how to use classes and constructors. Also, I realised my weak areas that require improvement e.g. understanding scope and algorithms. 
 
-## UX 
-Starting with a desktop first approach I created a very basic wireframe. [Wireframe and notes](https://res.cloudinary.com/www-madine-se/image/upload/v1585001794/fruit_game/Untitled_Artwork_2_zccka0.jpg) from first mentor call. I did not find the need to create any more detailed mockups and wireframes because the design is so simple. 
+I would improve a lot of things if I had more time. For example - count the score throughout the game and create a high score board, animate everything in a more appealing way, refine the design, make the game beautifully responsive on all devices.
 
-The design of this page is clean and fresh. I used neutral colors for the background and the back of the cards so the user can concentrate on the front of the cards which have different pastel backgrounds and the fruits are in rich colors. 
-
-To create the cards I created a Photoshop file with numerous artboards and imported the back of the card and the individual fruit vectors. Then added pastel backgrounds in different tones. The  screenshot of initial card design can be found [here](https://res.cloudinary.com/www-madine-se/image/upload/v1585001211/fruit_game/Screenshot_2020-03-23_at_21.49.36_gvqbya.png).
-
+## UX
+### Goals
 Goals to be achieved of this website: 
 
 * Create a playable game
@@ -32,7 +46,18 @@ Goals to be achieved of this website:
 * Play through varying difficulty levels
 * Ability to play the game on different sized screens
 
+### Research
+
+### Wireframes
+Starting with a desktop first approach I created a very basic wireframe. [Wireframe and notes](https://res.cloudinary.com/www-madine-se/image/upload/v1585001794/fruit_game/Untitled_Artwork_2_zccka0.jpg) from first mentor call. I did not find the need to create any more detailed mockups and wireframes because the design is so simple.
+
+### Design
+The design of this page is clean and fresh. I used neutral colors for the background and the back of the cards so the user can concentrate on the front of the cards which have different pastel backgrounds and the fruits are in rich colors. 
+
+To create the cards I created a Photoshop file with numerous artboards and imported the back of the card and the individual fruit vectors. Then added pastel backgrounds in different tones. The  screenshot of initial card design can be found [here](https://res.cloudinary.com/www-madine-se/image/upload/v1585001211/fruit_game/Screenshot_2020-03-23_at_21.49.36_gvqbya.png).
+
 I got rather lucky finding the perfect free fruit vectors. It took only a few minutes of googling. I'm always very picky about the images I choose so finding them so fast was surprising.
+
 
 ## Features
 Features of this website are:
@@ -141,7 +166,6 @@ If you wish to run this code locally:
 * [Back of the card pattern](https://www.freepik.com/free-vector/hand-drawn-fruit-mobile-pattern_3069263.htm#page=1&query=fruits&position=38)
 * [Individual fruits](https://www.freepik.com/free-vector/tropical-fruits-retro-cartoon-icons-set_3791458.htm#page=2&query=fruits++mango&position=15)
 
-[Link back to header 1](#header2)
 ### Audio
 * [Card flip](http://www.orangefreesounds.com/card-flip-sound-effect/)
 * [Matched](https://www.zapsplat.com/music/game-sound-synthesized-bright-pluck-good-for-success-award-or-achievement-1/)
@@ -150,7 +174,9 @@ If you wish to run this code locally:
 * [Game over](https://www.zapsplat.com/music/game-sound-basic-digital-retro-incorrect-wrong-error-negative-tone-10/)
 * [Background audio](https://www.zapsplat.com/music/forest-environment-ambience-clearing-spring-summer-birds/)
 
-### Acknowledgements
+## Acknowledgements
 I was initally tempted to create a Snakes and Ladders game. I had downloaded one version of it on my Ipad and found it to be poorly made. As it would be too difficult for me to create at this point and found a great tutorial by [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) for memory game and decided to go with it.
 
 Big thanks to my mentor [Maranatha Ilesanmi](https://github.com/mbilesanmi) for helping and guiding me through the whole process of developing this game. 
+
+[Back to top ↑](#JUICY-FRUIT-MEMORY-GAME)

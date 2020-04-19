@@ -146,7 +146,6 @@ class MixOrMatch {
             if (this.timeRemaining === 0)
                 this.gameOver();
         }, 1000); //interval is 1sec
-
     }
 
     gameOver() {
