@@ -44,19 +44,19 @@ class AudioController {
     }
 }
 
-/* function mute() {
-
+function muteButton() {
+    if (document.getElementById("muteId").classList.contains('fa-volume-mute')) {
+        console.log("vol up")
+        document.getElementById("muteId").classList.toggle('fa-volume-up');
+    }
     /*     if (document.getElementById("mute-id").classList.contains('fa-volume-up')) {
             document.getElementById("mute-id").classList.toggle('fa-volume-mute');
             console.log("mute")
         }; */
+}
 
-/*     if (document.getElementById("mute-id").classList.contains('fa-volume-mute')) {
-        console.log("vol up")
-        document.getElementById("mute-id").classList.toggle('fa-volume-up');
-    }
-    document.getElementById('muteId').addEventListener('click', () => { this.mute(); });
-} */
+//document.getElementById('muteId').addEventListener('click', () => { this.mute(); });
+
 
 // **** ADDING CARDS TO DECK ****
 
@@ -101,7 +101,7 @@ class MixOrMatch {
     createCards() {
         const level = parseInt(localStorage.getItem('currentLevel')); // || 1;
 
-        let duplicate = [...levels[level], ...levels[level]]; //level3?? //rūtas tip// too many papayas
+        let duplicate = [...levels[level], ...levels[level]]; //Rūtas help
 
         let insertCard = document.getElementById('containerId');
 
@@ -258,17 +258,27 @@ class MixOrMatch {
         //so if it returns TRUE the player can flip a card
     }
 
+    mute() {
+        let muteButton = document.getElementById('muteId');
 
-    /*     muteF() {
-            document.getElementById('muteId').addEventListener('click', () => { this.mute(); });
-            mute()
-            if (document.getElementById("mute-id").classList.contains('fa-volume-mute')) {
-                console.log("vol up")
-                document.getElementById("mute-id").classList.toggle('fa-volume-up');
-            }
-        } */
+        if (this.muteButton.addEventListener) {
+            this.muteButton.addEventListener("click", () => {
+                console.log("Button clicked.");
+            });
+        }
+
+        /*  this.muteButton.addEventListener('click', () => {
+     this.audioController.match();
+     console.log("mute function")
+ });
+} */
+
+        /*         muteButton.addEventListener('click', () => {
+                    this.audioController.victory();
+                    console.log("mute button")
+                }); */
+    }
 }
-
 // ***** Starts the game only when page is fully loaded ******
 
 function ready() {
