@@ -44,21 +44,12 @@ class AudioController {
     }
 }
 
-
 function muteIcon() {
-
     if (document.getElementById("muteId").classList.contains('fa-volume-mute')) {
-        console.log("vol up")
+        console.log("vol up");
         document.getElementById("muteId").classList.toggle('fa-volume-up');
     }
-    /*     if (document.getElementById("mute-id").classList.contains('fa-volume-up')) {
-            document.getElementById("mute-id").classList.toggle('fa-volume-mute');
-            console.log("mute")
-        }; */
 }
-
-//document.getElementById('muteId').addEventListener('click', () => { this.mute(); });
-
 
 // **** ADDING CARDS TO DECK ****
 
@@ -84,8 +75,6 @@ const levels = {
     3: level3,
     4: level4,
 };
-
-
 
 // ******CARDS*******
 
@@ -177,7 +166,6 @@ class MixOrMatch {
 
     levelUp() {
         clearInterval(this.countDown);
-
         localStorage.setItem('currentLevel', this.currentLevel + 1);
         this.currentLevel = this.currentLevel + 1;
         console.log(this.currentLevel);
@@ -189,9 +177,7 @@ class MixOrMatch {
         } else {
             this.audioController.levelUpPing();
             document.getElementById('level-up-text').classList.add('visible');
-            refreshPage();
         }
-
     }
 
     hideCards() {
@@ -264,8 +250,12 @@ class MixOrMatch {
     }
 
     mute() {
-        this.audioController.stopMusic();
-    }
+        this.audioController.stopMusic() === true;
+    };
+
+    unmute() {
+        this.audioController.startMusic();
+    };
 }
 
 
@@ -287,7 +277,12 @@ function ready() {
 
     let muteButton = document.getElementById('muteButton').addEventListener("click", () => {
         console.log("Mute button clicked.");
-        game.mute();
+        if (document.getElementById("muteId").classList.contains('fa-volume-up')) {
+            game.mute();
+        }
+        else {
+            game.unmute();
+        }
     });
 }
 
