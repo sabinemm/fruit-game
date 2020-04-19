@@ -1,11 +1,21 @@
 # JUICY FRUIT MEMORY GAME
 ## Interactive Front-end Web Development Project
 
-![JuicyFruitGame](https://res.cloudinary.com/www-madine-se/image/upload/v1587327312/fruit_game/JuicyCombo_kn64cx.png)
+<p align="center">
+  <img width="40%" src="https://res.cloudinary.com/www-madine-se/image/upload/v1587327312/fruit_game/JuicyCombo_kn64cx.png">
+</p>
 
-***[Play me](https://sabinemm.github.io/fruit-game/)***
+<p align="center"><a href="https://sabinemm.github.io/fruit-game/">
+Play game</a></p>
 
-## Purpose
+<details>
+<summary>Table of contents</summary>
+
+</details>
+<p href="#tith">tith</p>
+
+## <a name="tith"></a> Purpose {#header2}
+
 The aim of this project was to create and build a single page application - playable game that that increases in complexity over the course of the game and challenges the players memory.
 
 ## UX 
@@ -131,6 +141,7 @@ If you wish to run this code locally:
 * [Back of the card pattern](https://www.freepik.com/free-vector/hand-drawn-fruit-mobile-pattern_3069263.htm#page=1&query=fruits&position=38)
 * [Individual fruits](https://www.freepik.com/free-vector/tropical-fruits-retro-cartoon-icons-set_3791458.htm#page=2&query=fruits++mango&position=15)
 
+[Link back to header 1](#header2)
 ### Audio
 * [Card flip](http://www.orangefreesounds.com/card-flip-sound-effect/)
 * [Matched](https://www.zapsplat.com/music/game-sound-synthesized-bright-pluck-good-for-success-award-or-achievement-1/)
