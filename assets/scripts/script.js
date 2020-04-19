@@ -44,7 +44,9 @@ class AudioController {
     }
 }
 
+
 function muteIcon() {
+
     if (document.getElementById("muteId").classList.contains('fa-volume-mute')) {
         console.log("vol up")
         document.getElementById("muteId").classList.toggle('fa-volume-up');
@@ -175,8 +177,7 @@ class MixOrMatch {
 
     levelUp() {
         clearInterval(this.countDown);
-        this.audioController.levelUpPing();
-        document.getElementById('level-up-text').classList.add('visible');
+
         localStorage.setItem('currentLevel', this.currentLevel + 1);
         this.currentLevel = this.currentLevel + 1;
         console.log(this.currentLevel);
@@ -184,9 +185,14 @@ class MixOrMatch {
         if (this.currentLevel === 2) {
             console.log("reached lvl2");
             this.victorious();
-        }
-    }
 
+        } else {
+            this.audioController.levelUpPing();
+            document.getElementById('level-up-text').classList.add('visible');
+            refreshPage();
+        }
+
+    }
 
     hideCards() {
         this.cardsArray.forEach(card => {
@@ -258,10 +264,7 @@ class MixOrMatch {
     }
 
     mute() {
-
-        muteButton.addEventListener("click", () => {
-            console.log("Button clicked.");
-        });
+        this.audioController.stopMusic();
     }
 }
 
@@ -283,8 +286,8 @@ function ready() {
     localStorage.setItem('currentLevel', 1); // saves level
 
     let muteButton = document.getElementById('muteButton').addEventListener("click", () => {
-        console.log("Button on the left clicked.");
-        game.victorious();
+        console.log("Mute button clicked.");
+        game.mute();
     });
 }
 
