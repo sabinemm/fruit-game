@@ -18,8 +18,8 @@ class AudioController {
         this.bgMusic.play();
     }
     stopMusic() {
-        this.bgMusic.pause(); //restarts music to beginning after pause
-        this.bgMusic.currentTime = 0;
+        this.bgMusic.pause();
+        //this.bgMusic.currentTime = 0; //restarts music to beginning after pause
     }
     flip() {
         this.flipSound.play();
@@ -54,7 +54,7 @@ function muteIcon() {
 // **** ADDING CARDS TO DECK ****
 
 const level1 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/grapefruit_wdcx0h.jpg`,
-    //`https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/dragonfruit_jy5sxt.jpg`,
+    // `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/dragonfruit_jy5sxt.jpg`,
     //`https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pomegranate_zdesmg.jpg`,
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/Lemon_ei9acy.jpg`];
 
@@ -64,9 +64,8 @@ const level2 = [`https://res.cloudinary.com/www-madine-se/image/upload/v15850458
 const level3 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045890/fruit_game/cards/mangosteen_zbitfe.jpg`,
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pinapple_g27ljn.jpg`];
 
-const level4 = [,
-    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045887/fruit_game/cards/lychee_tfkj5m.jpg`,
-    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/mango_vtic6q.jpg`,]
+const level4 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045890/fruit_game/cards/passionfruit_c9oa7w.jpg`,
+    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/mango_vtic6q.jpg`];
 
 //rūtas code snippet to solve adding cards on next level
 const levels = {
@@ -117,15 +116,13 @@ class MixOrMatch {
 
         this.cardsArray = cards;
     }
-    // if for every level? for cards instead?
-
 
     startGame() {
-        this.cardToCheck = null; //gets called multiple times e.g. when restarting the game
+        this.cardToCheck = null;
         this.totalClicks = 0;
         this.timeRemaining = this.totalTime;
-        this.matchedCards = []; //empty array
-        this.busy = true; //will put false once game is started
+        this.matchedCards = [];
+        this.busy = true; //will be false once game is started
 
         setTimeout(() => {
             this.audioController.startMusic();
@@ -169,9 +166,8 @@ class MixOrMatch {
         localStorage.setItem('currentLevel', this.currentLevel + 1);
         this.currentLevel = this.currentLevel + 1;
         console.log(this.currentLevel);
-
-        if (this.currentLevel === 2) {
-            console.log("reached lvl2");
+        if (this.currentLevel === 5) {
+            console.log("reached lvl5");
             this.victorious();
 
         } else {
@@ -250,12 +246,12 @@ class MixOrMatch {
     }
 
     mute() {
-        this.audioController.stopMusic() === true;
-    };
+        this.audioController.stopMusic();
+    }
 
     unmute() {
         this.audioController.startMusic();
-    };
+    }
 }
 
 
@@ -279,8 +275,7 @@ function ready() {
         console.log("Mute button clicked.");
         if (document.getElementById("muteId").classList.contains('fa-volume-up')) {
             game.mute();
-        }
-        else {
+        } else {
             game.unmute();
         }
     });
@@ -293,6 +288,7 @@ if (document.readyState === 'loading') {
 } else {
     ready();
 }
+
 // ***** Reloads the page when clicked on Game Over overlay ******
 
 function refreshPage() {

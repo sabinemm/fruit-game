@@ -17,10 +17,9 @@ body {
     color: rgb(245, 6, 85);
     font-family: 'Galada', cursive;
     text-align: center;
-    font-size: 3em;
+    font-size: 2,5em;
     margin-block-end: 0;
     text-shadow: 2px 2px 4px #a09f9f;
-
 }
 
 .game-info-container {
@@ -78,11 +77,10 @@ transform: rotateY(-180deg);
 }
   
 .card.visible .card-back { /*change to .card:hover to check if it works*/
-    transform: rotateY(-180deg);
-    -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
   -webkit-transform: rotateY(-180deg);
   -moz-transform: rotateY(-180deg);
-
   }
   
   .card.visible .card-front { /*change to .card:hover to check if it works*/
@@ -134,14 +132,33 @@ transform: rotateY(-180deg);
     color: rgb(252, 36, 119);
     font-family: 'Galada', cursive;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
-  
+
+  .JuicyCombo {
+    width: 40%;
+    animation: Juicy 300ms forwards;
+  }
+
+  @keyframes Juicy {
+    from {
+       width: 0%;
+    }
+    to {
+      width: 40%;
+    }
+  }
   .overlay-text-small {
     font-size: .3em;
   }
-  
+
+  .instruction-text {
+    font-family: 'Quicksand', sans-serif;
+    font-size: .25em;
+    color: rgba(241,248,255,.8);
+  }
+
   .overlay-text.visible {
     display: flex;
     flex-direction: column;
@@ -150,11 +167,11 @@ transform: rotateY(-180deg);
   
   @keyframes overlay-grow {
     from {
-      background-color: rgba(0, 0, 0, 0);
+      background-color: rgba(0, 117, 252, 0);
       font-size: 0;
     }
     to {
-      background-color: rgba(0, 0, 0, .8);
+      background-color: rgba(85, 84, 99, 0.5);
       font-size: 3em;
     }
   }
@@ -177,5 +194,6 @@ transform: rotateY(-180deg);
     right:20px;
     color: rgba(0, 0, 0, .5);
     text-align:center;
-    text-shadow: 2px 2px 3px #999;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    z-index: 200;
   }

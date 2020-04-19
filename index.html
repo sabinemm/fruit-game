@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html SameSite=None Secure>
 <html lang="en">
 
 <head>
@@ -15,8 +15,12 @@
     <h1 class="page-title">Juicy Fruit</h1>
 
     <!-- add visible class to see the overlay-->
+
     <div class="overlay-text visible">
+        <img src="https://res.cloudinary.com/www-madine-se/image/upload/v1587327312/fruit_game/JuicyCombo_kn64cx.png"
+            alt="Juicy Fruit banner" class="JuicyCombo">
         Click to Start
+        <span class="instruction-text">Match all cards to win!</span>
     </div>
 
     <div onClick="refreshPage()" id="game-over-text" class="overlay-text">
@@ -40,7 +44,7 @@
                 Time <span id="time-remaining"></span>
             </div>
             <div class="game-info">
-                Flips <span id="flips"></span>
+                Flips <span id="flips">0</span>
             </div>
         </div>
 
