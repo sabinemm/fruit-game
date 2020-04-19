@@ -44,7 +44,7 @@ class AudioController {
     }
 }
 
-function muteButton() {
+function muteIcon() {
     if (document.getElementById("muteId").classList.contains('fa-volume-mute')) {
         console.log("vol up")
         document.getElementById("muteId").classList.toggle('fa-volume-up');
@@ -167,6 +167,12 @@ class MixOrMatch {
         document.getElementById('game-over-text').classList.add('visible');
     }
 
+    victorious() {
+        clearInterval(this.countDown);
+        this.audioController.victory();
+        document.getElementById('victory-text').classList.add('visible');
+    }
+
     levelUp() {
         clearInterval(this.countDown);
         this.audioController.levelUpPing();
@@ -174,21 +180,13 @@ class MixOrMatch {
         localStorage.setItem('currentLevel', this.currentLevel + 1);
         this.currentLevel = this.currentLevel + 1;
         console.log(this.currentLevel);
+
+        if (this.currentLevel === 2) {
+            console.log("reached lvl2");
+            this.victorious();
+        }
     }
 
-    /*     stopGame() {
-            if (localStorage.setItem('currentLevel') === 2) {
-                console.log("reached lvl2");
-                this.victorious();
-            }
-        } */
-
-
-    victorious() {
-        clearInterval(this.countDown);
-        this.audioController.victory();
-        document.getElementById('victory-text').classList.add('visible');
-    }
 
     hideCards() {
         this.cardsArray.forEach(card => {
@@ -260,32 +258,13 @@ class MixOrMatch {
     }
 
     mute() {
-        let muteButton = document.getElementById('floatButton');
 
-        /*         if (this.muteButton.addEventListener) {
-                    this.muteButton.addEventListener("click", () => {
-                        console.log("Button clicked.");
-                    });
-                } */
-
-        /*         this.muteButton.forEach(muteButton => {
-                    this.muteButton.addEventListener('click', () => {
-                        console.log("mute function")
-                    });
-                }); */
-
-        /*  this.muteButton.addEventListener('click', () => {
-     this.audioController.match();
-     console.log("mute function")
- });
-} */
-
-        /*         muteButton.addEventListener('click', () => {
-                    this.audioController.victory();
-                    console.log("mute button")
-                }); */
+        muteButton.addEventListener("click", () => {
+            console.log("Button clicked.");
+        });
     }
 }
+
 
 // ***** Starts the game  ******
 
@@ -302,6 +281,11 @@ function ready() {
     });
 
     localStorage.setItem('currentLevel', 1); // saves level
+
+    let muteButton = document.getElementById('muteButton').addEventListener("click", () => {
+        console.log("Button on the left clicked.");
+        game.victorious();
+    });
 }
 
 // ***** Starts the game only when page is fully loaded ******
