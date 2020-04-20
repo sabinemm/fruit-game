@@ -11,6 +11,7 @@ Play the game</a></p>
 ## Table of Contents
 
 - [**About**](#About)
+- [**Demo**](#Demo)
 - [**UX**](#UX)
     - [User Stories](#User-Stories)
   - [Research](#Research)
@@ -40,6 +41,8 @@ I could choose between 3 different projects and chose to create a memory game be
 Game name idea simply comes from the images I used for the project. 
 
 I would improve a lot of things if I had more time. For example - count the score throughout the game and create a high score board, animate everything in a more appealing way, refine the design, make the game beautifully responsive on all devices.
+## Demo
+
 
 ## UX
 ### User Stories
@@ -65,10 +68,18 @@ To understand the game, I researched existing versions of the game. This gave me
 Most versions had square or rectangular cards. Many versions of the game had extremely colorful clashing patterns that distract the player from memorizing the cards. This is my reasoning why I chose the particular design.
 
 ### Wireframes
-Starting with a desktop first approach I created a very basic wireframe. [Wireframe and notes](https://res.cloudinary.com/www-madine-se/image/upload/v1585001794/fruit_game/Untitled_Artwork_2_zccka0.jpg) from first mentor call. 
+* Starting with a desktop first approach I created a very basic wireframe. [Wireframe and notes](https://res.cloudinary.com/www-madine-se/image/upload/v1585001794/fruit_game/Untitled_Artwork_2_zccka0.jpg) from first mentor call. 
 
+* Interactive Adobe XD [prototype](https://xd.adobe.com/spec/7b9cb5c9-c6f7-4647-7e5f-4a64a4b353b3-0dad/) 
+* [Screenshot](https://res.cloudinary.com/www-madine-se/image/upload/v1587419045/fruit_game/Screenshot_2020-04-20_at_23.43.23_qnslkb.png) (page and overlays in same file for simplicity).
 
-There are differences between my original mockup because I did not find the need to create any more detailed mockups and wireframes because the design is so simple. During the development process I tweaked colors and card brightness to be more visually pleasing. 
+* [Start game](https://res.cloudinary.com/www-madine-se/image/upload/v1587419325/fruit_game/Start_game_overlay_den4to.png)
+* [Level 1](https://res.cloudinary.com/www-madine-se/image/upload/v1587419325/fruit_game/level_1_rxvm5e.png)
+* [Level Up](https://res.cloudinary.com/www-madine-se/image/upload/v1587419325/fruit_game/Levelup_gll25d.png)
+* [Level 2](https://res.cloudinary.com/www-madine-se/image/upload/v1587419325/fruit_game/level_2_s8r5nz.png)
+* [Victory / Game over](https://res.cloudinary.com/www-madine-se/image/upload/v1587419325/fruit_game/game_over_bv9vpv.png)
+
+There are differences between my original wireframe and the actual page because changes happened during development process. I did not find the need to create any more detailed mockups  because the design is so simple and I already had seen how my cards look [together](https://res.cloudinary.com/www-madine-se/image/upload/v1585001211/fruit_game/Screenshot_2020-03-23_at_21.49.36_gvqbya.png). 
 
 ### Design
 The design of this page is clean and fresh. I used neutral colors for the background and the back of the cards so the user can concentrate on the front of the cards which have different pastel backgrounds and the fruits are in rich colors. 
@@ -76,6 +87,8 @@ The design of this page is clean and fresh. I used neutral colors for the backgr
 To create the cards I created a Photoshop file with numerous artboards and imported the back of the card and the individual fruit vectors. Then added pastel backgrounds in different tones. The screenshot of initial card design can be found [here](https://res.cloudinary.com/www-madine-se/image/upload/v1585001211/fruit_game/Screenshot_2020-03-23_at_21.49.36_gvqbya.png).
 
 I adjusted the brightness of [back](https://res.cloudinary.com/www-madine-se/image/upload/v1587330036/fruit_game/cards/card-back3_vy5epc.jpg) of the cards and created [game title](https://res.cloudinary.com/www-madine-se/image/upload/v1587327312/fruit_game/JuicyCombo_kn64cx.png) with fruit and transparent background later on in the project using AI and PS.
+
+During the development process I tweaked colors and card brightness, fonts, font colors and sizes to be more visually pleasing. 
 
 I got rather lucky finding the perfect free fruit vectors. It took only a few minutes of googling. I'm always very picky about the images I choose so finding them so fast was surprising.
 
@@ -134,8 +147,8 @@ Below are a list of the programming languages, technologies and frameworks used 
 * **Firefox** Inspector
 * **Safari** Web Inspector 
 * **[Procreate](https://procreate.art)** on iPad (mockup drawing)
-* **Adobe Photoshop CC** (creating cards)
-* **Adobe Illustrator CC** (importing & editing fruit vectors)
+* **Adobe Photoshop CC** to create cards
+* **Adobe Illustrator CC** importing & editing fruit vectors
 * **Adobe XD** to create mockup
 * **[Cloudinary](https://cloudinary.com/)** to store all images
 * **[Favicon.io](https://favicon.io/favicon-converter/)** to convert favicon.ico
@@ -177,11 +190,13 @@ Devices and platforms used for testing:
     - Chrome
 
 ### Manual testing
-1. Clicking on overlay over the whole page
-2. Turning all cards, clicking on all cards fast
+1. Clicking on overlay over the whole window area.
+2. Turning all cards, clicking on all cards fast.
 3. Turning background audio on and off by clicking mute button.
+4. Letting the timer run out to check if Game Over overlay appears.
+5. Playing the game until Victory overlay appears.
 
-I had planned to use Jasmine framework for automated testing but due to time constraints I was not able to. Yet.
+I had planned to use Jasmine  for automated testing but due to time constraints I was not able to. Yet.
 
 ### Errors
 Current errors:
