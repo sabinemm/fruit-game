@@ -148,12 +148,14 @@ Devices and platforms used for testing:
 I had planned to use Jasmine framework for automated testing but due to time constraints I was not able to. Yet.
 
 ### Errors
+Current and past errors:
+
 1.  ***NOT YET RESOLVED*** The first error I encountered was with Safari (on all devices) while turning cards. [Click here to see video](https://res.cloudinary.com/www-madine-se/video/upload/v1585779094/fruit_game/safari-error-fruit-game_am8yt1.mov). During the animation of card turning it glitches and half of the other side is visible during animation. I added -webkit- to transform styles but it did not solve the issue.  
 2. Resolved. Deployed website on Github pages opened on Safari sometimes lets match not actually matching cards. 
-3.  ***NOT YET RESOLVED***  Reaching level two, cards duplicate function called twice.
-4. ***NOT YET RESOLVED*** When failing with time running out, game moves on to the next level. 
+3.  Resolved. Reaching level two, cards duplicate function called twice.
+4. Resolved. When failing with time running out, game moves on to the next level. 
 5. Fixed. Too many papayas on level 2. 
-6. ***NOT YET RESOLVED*** Duplicated on level 3 from level 2.
+6. Resolved. Duplicated on level 3 from level 2.
 
 ## Deployment
 The website was made by creating and new repository in Github, copying [web url](https://github.com/sabinemm/fruit-game.git) and cloned with built in Git control in Visual Studio Code. Git was used for version control and pushed to a repository [hosted](https://sabinemm.github.io/fruit-game/) on Github pages. 
@@ -193,6 +195,6 @@ I was initally tempted to create a Snakes and Ladders game. I had downloaded one
 
 Appreciating my friends Rūta and Agris teaching me how to find and fix errors and giving me hints how to solve problems.
 
-A thanks to my mentor [Maranatha Ilesanmi](https://github.com/mbilesanmi) for helping and guiding me through the whole process of developing this game. 
+A thanks to my mentor [Maranatha Ilesanmi](https://github.com/mbilesanmi) for helping and guiding me through the process of developing this game. 
 
 [Back to top ↑](#JUICY-FRUIT-MEMORY-GAME)
