@@ -45,9 +45,14 @@ Game name idea simply comes from the images I used for the project.
 I would improve a lot of things if I had more time. For example - count the score throughout the game and create a high score board, animate everything in a more appealing way, refine the design, make the game beautifully responsive on all devices.
 
 ## Demo
-![Juicy Fruit game demo gif](assets/demo/demo.gif)
-<p align="center"><a href="https://res.cloudinary.com/www-madine-se/video/upload/v1587425336/fruit_game/demo-video_jz6isg.mov">
-Demo video backup</a></p>
+
+<p align="center">
+  <img src="assets/demo/demo.gif">
+</p>
+
+<p align="center">
+<a href="https://res.cloudinary.com/www-madine-se/video/upload/v1587425336/fruit_game/demo-video_jz6isg.mov">Demo video backup</a>
+</p>
 
 ## UX
 ### User Stories
