@@ -77,6 +77,8 @@ const levels = {
 
 // ******CARDS*******
 
+
+
 class MixOrMatch {
     constructor(totalTime) {
         this.cardsArray = [];
@@ -128,7 +130,7 @@ class MixOrMatch {
         setTimeout(() => {
             this.audioController.startMusic();
             console.log(1111);
-            this.shuffleCards();
+            //this.shuffleCards();
             this.countDown = this.startCountDown();
             this.busy = false;
         }, 500); //wait 500ms before whatever is in this function
@@ -138,6 +140,7 @@ class MixOrMatch {
 
         //localStorage.setItem('currentLevel', 1); // saves level
         this.createCards();
+        this.shuffleCards();
     }
 
     startCountDown() {
@@ -163,12 +166,13 @@ class MixOrMatch {
 
     levelUp() {
         clearInterval(this.countDown);
-        parseInt(localStorage.setItem('currentLevel', this.currentLevel + 1));
-        parseInt(this.currentLevel = this.currentLevel + 1);
+        localStorage.setItem('currentLevel', this.currentLevel + 1);
+        this.currentLevel = this.currentLevel + 1;
         console.log(this.currentLevel);
-        if (this.currentLevel === 5) {
+        if (this.currentLevel > 4) {
             console.log("reached lvl5");
             this.victorious();
+            localStorage.setItem('currentLevel', 1);
 
         } else {
             this.audioController.levelUpPing();
@@ -261,7 +265,7 @@ function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     //let cards = Array.from(document.getElementsByClassName('card'));
     let game = new MixOrMatch(60);  //game time
-
+    console.log("levelvelvel?")
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
             overlay.classList.remove('visible'); //starts game whenever clicked on overlay
