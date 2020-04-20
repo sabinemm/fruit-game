@@ -12,7 +12,7 @@ Play the game</a></p>
 
 - [**About**](#About)
 - [**UX**](#UX)
-  - [Goals](#Goals)
+    - [User Stories](#User-Stories)
   - [Research](#Research)
   - [Wireframes](#Wireframes)
   - [Design](#Design)
@@ -42,14 +42,21 @@ Game name idea simply comes from the images I used for the project.
 I would improve a lot of things if I had more time. For example - count the score throughout the game and create a high score board, animate everything in a more appealing way, refine the design, make the game beautifully responsive on all devices.
 
 ## UX
-### Goals
-Goals to be achieved of this website: 
+### User Stories
 
-* Create a playable game
-* Simple and straightforward use
-* The object of the game is to collect the most matching card pairs.
-* Play through varying difficulty levels
-* Ability to play the game on different sized screens
+* I want to play a game to improve my memory with simple and straightforward use.
+* I want to game to be presented in visually appealing and non-disctracting way.
+* I want to be presented with an game start window to be able to start the game on-click.
+* I want to hear a sound when clicking on a card to indicate card flipping around.
+* I want the background sound to be muted before I start the game.
+* I want to be able to turn the background sound on and off.
+* I want to play through levels increasing in difficulty.
+* I want to be able to play the game on different devices.
+* I want to hear a sound that indicates that I have found a card match.
+* I want to hear and see that I have completed a level.
+* I want to be able to click on the screen to start playing the next level, in case I want to take a break.
+* I want to be notified of when I win the game after completing a set number of levels.
+* I want the ability to restart the game after winning or failing.
 
 ### Research
 
@@ -58,7 +65,10 @@ To understand the game, I researched existing versions of the game. This gave me
 Most versions had square or rectangular cards. Many versions of the game had extremely colorful clashing patterns that distract the player from memorizing the cards. This is my reasoning why I chose the particular design.
 
 ### Wireframes
-Starting with a desktop first approach I created a very basic wireframe. [Wireframe and notes](https://res.cloudinary.com/www-madine-se/image/upload/v1585001794/fruit_game/Untitled_Artwork_2_zccka0.jpg) from first mentor call. I did not find the need to create any more detailed mockups and wireframes because the design is so simple.
+Starting with a desktop first approach I created a very basic wireframe. [Wireframe and notes](https://res.cloudinary.com/www-madine-se/image/upload/v1585001794/fruit_game/Untitled_Artwork_2_zccka0.jpg) from first mentor call. 
+
+
+There are differences between my original mockup because I did not find the need to create any more detailed mockups and wireframes because the design is so simple. During the development process I tweaked colors and card brightness to be more visually pleasing. 
 
 ### Design
 The design of this page is clean and fresh. I used neutral colors for the background and the back of the cards so the user can concentrate on the front of the cards which have different pastel backgrounds and the fruits are in rich colors. 
@@ -72,8 +82,6 @@ I got rather lucky finding the perfect free fruit vectors. It took only a few mi
 ## Features
 ### Functionality
 
-###  Existing features
-Features of this website are:
 * Game starts with a "Click to start" overlay
 * The cards sligthy increase in size when hovered over
 * Pointer changes to hand when hovered over the cards and overlays
@@ -85,39 +93,51 @@ Features of this website are:
 * Flips are counted throughout the game
 * Several levels
 * "Victory" overlay appears when the game is finished with an option to click to restart 
-* On and off button for background music
 * "Game Over" overlay appears when time runs out.
 
+###  Existing features
+
+* **Start Game overlay** with Juicy Fruit logo
+* **On and off button** for background music
+* **Cards**
+* **Timer**
+* **Flip Counter**
+* **Level Up overlay**
+* **Victory overlay**
+* **Game Over overlay**
+
 ###  Future features
-- [ ] Optional feature to send end score of the game to your email
-- [ ] Mobile friendly (cards strething accordingly across different screens)
-- [ ] Pause game
-- [ ] Pause audio when page is inactive
-- [ ] "Are you sure you want to give up?" popup if trying to close the page mid game
+
+- [ ] **More mobile friendly** (cards strething accordingly across different screens)
+- [ ] **Pause game** button.
+- [ ] **Pause audio** when page is inactive.
+- [ ] **Popup** "Are you sure you want to give up?" if trying to close the page mid game.
+- [ ] **Leaderboard**  This would require entering a name before starting a game and then storing the game score in a database.
 
 ## Technologies used
 Below are a list of the programming languages, technologies and frameworks used for this website.
 
-* HTML5
-* CSS3
-* Vanilla JS
-* Visual Studio Code 
+* **HTML5**
+* **CSS3**
+* **Vanilla JS**
+* **Visual Studio Code** development environment
     - Live Server Extension
-    - Color Picker
-    - Markdown Preview
-* Git for version control
-* Github to store project
-* Github pages to deploy project
-* Markdown (README.md file)
-* [Google Fonts](https://fonts.google.com)
-* Google Chrome developer tools
-* Firefox Inspector
-* Safari Web Inspector 
-* [Procreate](https://procreate.art) on iPad (mockup drawing)
-* Adobe Photoshop CC (creating cards)
-* Adobe Illustrator CC (importing & editing fruit vectors)
-* [Cloudinary](https://cloudinary.com/) to store all images
-* [Favicon.io](https://favicon.io/favicon-converter/)
+    - Color Picker Extension
+    - Markdown Preview Extension
+* **Git** for version control
+* **Github** to store project
+* **Github pages** to deploy project
+* **Markdown** (README.md file)
+* **[Google Fonts](https://fonts.google.com)**
+* **Google Chrome** developer tools
+* **Firefox** Inspector
+* **Safari** Web Inspector 
+* **[Procreate](https://procreate.art)** on iPad (mockup drawing)
+* **Adobe Photoshop CC** (creating cards)
+* **Adobe Illustrator CC** (importing & editing fruit vectors)
+* **Adobe XD** to create mockup
+* **[Cloudinary](https://cloudinary.com/)** to store all images
+* **[Favicon.io](https://favicon.io/favicon-converter/)** to convert favicon.ico
 
 ## Testing
 * [HTML validator](https://validator.w3.org/#validate_by_input)
@@ -152,31 +172,28 @@ Devices and platforms used for testing:
 ### Manual testing
 1. Clicking on overlay over the whole page
 2. Turning all cards, clicking on all cards fast
+3. Turning background audio on and off by clicking mute button.
 
 I had planned to use Jasmine framework for automated testing but due to time constraints I was not able to. Yet.
 
 ### Errors
-Current and past errors:
+Current errors:
+1.  ***NOT YET FIXED*** The first error I encountered was with Safari (on all devices) while turning cards. [Click here to see video](https://res.cloudinary.com/www-madine-se/video/upload/v1585779094/fruit_game/safari-error-fruit-game_am8yt1.mov). During the animation of card turning it glitches and half of the other side is visible during animation. I added -webkit- etc to transform styles but it did not solve the issue. By googling I found that many other people have run into this issue. I did not want to spend too much time on time trying tp fix it at the moment.
+2. ***NOT YET FIXED*** On some browsers/devices the game levels do not function properly. Level Up overlay shows up, but no cards are added to the deck. I parsed the local storage items, because that was the issue with Firefox but the problem still exists on mobile Chrome.
+3. ***NOT YET FIXED*** Levels localStorage does not increment properly on Safari. I found a possible [solution](https://github.com/marcuswestin/store.js/) on [Reddit](https://www.reddit.com/r/webdev/comments/7dn7dc/problems_with_localstorage_on_safari/).
 
-1.  ***NOT YET RESOLVED*** The first error I encountered was with Safari (on all devices) while turning cards. [Click here to see video](https://res.cloudinary.com/www-madine-se/video/upload/v1585779094/fruit_game/safari-error-fruit-game_am8yt1.mov). During the animation of card turning it glitches and half of the other side is visible during animation. I added -webkit- etc to transform styles but it did not solve the issue.  
-2. Resolved. Deployed website on Github pages opened on Safari sometimes lets match not actually matching cards. 
-3.  Resolved. Reaching level two, cards duplicate function called twice.
-4. Resolved. When failing with time running out, game moves on to the next level. 
-5. Fixed. Too many papayas on level 2. 
-6. Resolved. Duplicated on level 3 from level 2.
-7. ***NOT YET RESOLVED*** On some browsers/devices the game levels do not function properly. Level Up overlay shows up, but no cards are added to the deck. I parsed the local storage items, because that was the issue with Firefox but the problem still exists on mobile Chrome.
-8. ***NOT YET RESOLVED*** Levels localStorage does not increment properly on Safari. I found a possible [solution](https://github.com/marcuswestin/store.js/) on [Reddit](https://www.reddit.com/r/webdev/comments/7dn7dc/problems_with_localstorage_on_safari/).
+Resolved errors:
+1. Deployed website on Github pages opened on Safari sometimes lets match not actually matching cards. 
+2. Reaching level two, cards duplicate function called twice.
+3. When failing with time running out, game moves on to the next level. 
+4. Too many papayas on level 2. 
+5. Duplicated on level 3 from level 2.
 
 ## Deployment
 The website was made by creating and new repository in Github, copying [web url](https://github.com/sabinemm/fruit-game.git) and cloned with built in Git control in Visual Studio Code. Git was used for version control and pushed to a repository [hosted](https://sabinemm.github.io/fruit-game/) on Github pages. 
 
 ### How to deploy code locally
 If you wish to run this code locally: 
-
-* Download or clone the code from the Github 
-* Click on "Clone or download" to Download ZIP or clone by copying the link
-* Uncompress the ZIP folder to view or clone into VS Code using Source Control and paste the link in "Clone" window
-
 
 1. Go to my GitHub [repository](https://github.com/sabinemm/fruit-game.git) 
 
@@ -188,11 +205,11 @@ If you wish to run this code locally:
 
 5. Change the current working directory to the location where you want the cloned directory to be made.
 
-6. Paste this into your console:
+6. Type  ```git clone``` and paste copied repository link.
+
+Or paste this into your console:
 
 ```git clone https://github.com/sabinemm/fruit-game.git```
-
-Or type  ```git clone``` and paste copied repository link
 
 7. Press Enter to complete
 
