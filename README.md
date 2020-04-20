@@ -96,12 +96,12 @@ Below are a list of the programming languages, technologies and frameworks used 
 
 * HTML5
 * CSS3
-* JavaScript
+* Vanilla JS
 * Google Fonts
 * Visual Studio Code + Live Server
-* Git
-* Github
-* Github pages
+* Git for version control
+* Github to store project
+* Github pages to deploy project
 * Markdown (README.md file)
 * [Google Fonts](https://fonts.google.com)
 * Google Chrome developer tools
@@ -145,6 +145,8 @@ Devices and platforms used for testing:
 1. Clicking on overlay over the whole page
 2. Turning all cards, clicking on all cards fast
 
+I had planned to use Jasmine framework for automated testing but due to time constraints I was not able to. Yet.
+
 ### Errors
 1.  ***NOT YET RESOLVED*** The first error I encountered was with Safari (on all devices) while turning cards. [Click here to see video](https://res.cloudinary.com/www-madine-se/video/upload/v1585779094/fruit_game/safari-error-fruit-game_am8yt1.mov). During the animation of card turning it glitches and half of the other side is visible during animation. I added -webkit- to transform styles but it did not solve the issue.  
 2. Resolved. Deployed website on Github pages opened on Safari sometimes lets match not actually matching cards. 
@@ -169,8 +171,9 @@ If you wish to run this code locally:
 * Javascript [tutorial](https://www.youtube.com/watch?v=3uuQ3g92oPQ) 
 * [StackOverflow](https://stackoverflow.com/questions/60885320/inserts-a-div-and-a-link-into-the-div-twice-and-does-this-with-several-links-js)
 * [Maranatha Ilesanmi](https://github.com/mbilesanmi) helping me with setting up local storage for levels 
-* My friend Rūta with helping me to put cards in the constructor and hinting me towards the right things to do
+* My friend Rūta with helping me to put cards in the constructor 
 * [OnClick refresh](https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click)
+* Several CI student ReadMe files as examples for my project writeup
 
 ### Images
 * [Fruit composition](https://www.freepik.com/free-vector/tropical-fruits-4-colorful-compositions-set_3791460.htm#page=2&query=fruits++mango&position=34)
@@ -188,6 +191,8 @@ If you wish to run this code locally:
 ## Acknowledgements
 I was initally tempted to create a Snakes and Ladders game. I had downloaded one version of it on my Ipad and found it to be poorly made. As it would be too difficult for me to create at this point and found a great tutorial by [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) for memory game and decided to go with it.
 
-Big thanks to my mentor [Maranatha Ilesanmi](https://github.com/mbilesanmi) for helping and guiding me through the whole process of developing this game. 
+Appreciating my friends Rūta and Agris teaching me how to find and fix errors and giving me hints how to solve problems.
+
+A thanks to my mentor [Maranatha Ilesanmi](https://github.com/mbilesanmi) for helping and guiding me through the whole process of developing this game. 
 
 [Back to top ↑](#JUICY-FRUIT-MEMORY-GAME)
