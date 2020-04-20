@@ -38,6 +38,8 @@ You can read more about Concentration game visiting [Wikipedia](https://en.wikip
 
 I could choose between 3 different projects and chose to create a memory game because my goal is to learn more about animation and logic. I learned a lot during this project e.g. how to use classes and constructors. Also, I realised my weak areas that require improvement e.g. understanding scope and algorithms. 
 
+I was initally tempted to create a Snakes and Ladders game. I had downloaded one version of it on my Ipad and found it to be poorly made. As it would be too difficult for me to create at this point and found a great tutorial by [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) for memory game and decided to go with it.
+
 Game name idea simply comes from the images I used for the project. 
 
 I would improve a lot of things if I had more time. For example - count the score throughout the game and create a high score board, animate everything in a more appealing way, refine the design, make the game beautifully responsive on all devices.
@@ -129,7 +131,7 @@ I got rather lucky finding the perfect free fruit vectors. It took only a few mi
 - [ ] **Leaderboard**  This would require entering a name before starting a game and then storing the game score in a database.
 
 ## Technologies used
-Below are a list of the programming languages, technologies and frameworks used for this website.
+Below are a list of the programming languages, technologies, frameworks and resources used for this website.
 
 * **HTML5**
 * **CSS3**
@@ -149,10 +151,13 @@ Below are a list of the programming languages, technologies and frameworks used 
 * **[Procreate](https://procreate.art)** on iPad (mockup drawing)
 * **Adobe Photoshop CC** to create cards
 * **Adobe Illustrator CC** importing & editing fruit vectors
-* **Adobe XD** to create mockup
+* **Adobe XD** to create mockup and prototype
 * **[Cloudinary](https://cloudinary.com/)** to store all images
 * **[Favicon.io](https://favicon.io/favicon-converter/)** to convert favicon.ico
 * **[Material.io](https://material.io/resources/icons/?style=baseline)** Mute/unmute icons
+* **Adobe Premiere** to make gameplay video
+* **[EZGIF](https://ezgif.com/video-to-gif)** to convert video to GIF for ReadMe file
+* **[Fisher–Yates shuffle](https://en.wikipedia.org/wiki/Fisher–Yates_shuffle)** to shuffle the cards
 
 ## Testing
 * [HTML validator](https://validator.w3.org/#validate_by_input)
@@ -249,6 +254,7 @@ Or paste this into your console:
 * [Fruit composition](https://www.freepik.com/free-vector/tropical-fruits-4-colorful-compositions-set_3791460.htm#page=2&query=fruits++mango&position=34)
 * [Back of the card pattern](https://www.freepik.com/free-vector/hand-drawn-fruit-mobile-pattern_3069263.htm#page=1&query=fruits&position=38)
 * [Individual fruits](https://www.freepik.com/free-vector/tropical-fruits-retro-cartoon-icons-set_3791458.htm#page=2&query=fruits++mango&position=15)
+* [Phone and laptop](https://store.ramotion.com/product/sketch-mockups?#demo) for gif
 
 ### Audio
 * [Card flip](http://www.orangefreesounds.com/card-flip-sound-effect/)
@@ -259,9 +265,12 @@ Or paste this into your console:
 * [Background audio](https://www.zapsplat.com/music/forest-environment-ambience-clearing-spring-summer-birds/)
 
 ## Acknowledgements
-I was initally tempted to create a Snakes and Ladders game. I had downloaded one version of it on my Ipad and found it to be poorly made. As it would be too difficult for me to create at this point and found a great tutorial by [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) for memory game and decided to go with it.
+
+I acknowledge that inline onclick events are not best practice, and should be handled in script file, but I found it less time consuming at the moment and might correct at a later point and will not use them in the same way in future projects.
 
 Appreciating my friends Rūta and Agris teaching me how to find and fix errors and giving me hints how to solve problems.
+
+Thanks to my cat for listening to me during [Rubber Duck Debugging](https://rubberduckdebugging.com).
 
 A thanks to my mentor [Maranatha Ilesanmi](https://github.com/mbilesanmi) for helping and guiding me through the process of developing this game. 
 

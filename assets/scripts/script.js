@@ -1,4 +1,4 @@
-// **** Sound Control *****
+/* Sound Control */
 
 class AudioController {
     constructor() {
@@ -19,8 +19,8 @@ class AudioController {
     }
     stopMusic() {
         this.bgMusic.pause();
-        //this.bgMusic.currentTime = 0; //restarts music to beginning after pause
     }
+
     flip() {
         this.flipSound.play();
     }
@@ -50,7 +50,7 @@ function muteIcon() {
     }
 }
 
-// **** CARD IMAGES ****
+/* CARD IMAGES  */
 
 const level1 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/grapefruit_wdcx0h.jpg`,
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/dragonfruit_jy5sxt.jpg`,
@@ -74,9 +74,7 @@ const levels = {
     4: level4,
 };
 
-// ******CARDS*******
-
-
+/*  CARDS */
 
 class MixOrMatch {
     constructor(totalTime) {
@@ -92,11 +90,11 @@ class MixOrMatch {
     createCards() {
         const level = parseInt(window.localStorage.getItem('currentLevel'));
 
-        let duplicate = [...levels[level], ...levels[level]]; //Rūtas help //duplicates the cards
+        let duplicate = [...levels[level], ...levels[level]]; //Rūtas help //duplicates the cards because it needs two cards for there to be a match
 
         let insertCard = document.getElementById('containerId');
 
-        //creates cards in html
+        //creates cards in html and let duplicate creates doubles
         duplicate.forEach(
             (href) => insertCard.insertAdjacentHTML('beforeend', `<div class="card zoom">
         <div class="card-back card-face">
@@ -128,15 +126,12 @@ class MixOrMatch {
 
         setTimeout(() => {
             this.audioController.startMusic();
-            //this.shuffleCards();
             this.countDown = this.startCountDown();
             this.busy = false;
         }, 500); //wait 500ms before whatever is in this function
         this.hideCards();
         this.timer.innerText = this.timeRemaining;
         this.ticker.innerText = this.totalClicks; //reseting inner timer and inner texts
-
-        //localStorage.setItem('currentLevel', 1); // saves level
         this.createCards();
         this.shuffleCards();
     }
@@ -199,10 +194,9 @@ class MixOrMatch {
 
     checkForCardMatch(card) {
         if (this.getCardType(card) === this.getCardType(this.cardToCheck)) {
-            this.cardMatch(card, this.cardToCheck);
-            //match
+            this.cardMatch(card, this.cardToCheck); //card match   
         } else
-            this.cardMisMatch(card, this.cardToCheck);
+            this.cardMisMatch(card, this.cardToCheck); // mismatch
         this.cardToCheck = null;
     }
 
@@ -251,12 +245,10 @@ class MixOrMatch {
     }
 }
 
-
-// ***** Starts the game  ******
+/*  Starts the game  */
 
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
-    //let cards = Array.from(document.getElementsByClassName('card'));
     let game = new MixOrMatch(60);  //game time
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
@@ -276,7 +268,7 @@ function ready() {
     });
 }
 
-// ***** Starts the game only when page is fully loaded ******
+/* Starts the game only when page is fully loaded */
 
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', ready());
@@ -284,7 +276,7 @@ if (document.readyState === 'loading') {
     ready();
 }
 
-// ***** Reloads the page when clicked on Game Over overlay ******
+/* Reloads the page when clicked on Game Over and Victory overlay */
 
 function refreshPage() {
     window.location.reload();
