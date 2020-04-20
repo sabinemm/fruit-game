@@ -158,14 +158,14 @@ I had planned to use Jasmine framework for automated testing but due to time con
 ### Errors
 Current and past errors:
 
-1.  ***NOT YET RESOLVED*** The first error I encountered was with Safari (on all devices) while turning cards. [Click here to see video](https://res.cloudinary.com/www-madine-se/video/upload/v1585779094/fruit_game/safari-error-fruit-game_am8yt1.mov). During the animation of card turning it glitches and half of the other side is visible during animation. I added -webkit- to transform styles but it did not solve the issue.  
+1.  ***NOT YET RESOLVED*** The first error I encountered was with Safari (on all devices) while turning cards. [Click here to see video](https://res.cloudinary.com/www-madine-se/video/upload/v1585779094/fruit_game/safari-error-fruit-game_am8yt1.mov). During the animation of card turning it glitches and half of the other side is visible during animation. I added -webkit- etc to transform styles but it did not solve the issue.  
 2. Resolved. Deployed website on Github pages opened on Safari sometimes lets match not actually matching cards. 
 3.  Resolved. Reaching level two, cards duplicate function called twice.
 4. Resolved. When failing with time running out, game moves on to the next level. 
 5. Fixed. Too many papayas on level 2. 
 6. Resolved. Duplicated on level 3 from level 2.
 7. ***NOT YET RESOLVED*** On some browsers/devices the game levels do not function properly. Level Up overlay shows up, but no cards are added to the deck. I parsed the local storage items, because that was the issue with Firefox but the problem still exists on mobile Chrome.
-8. ***NOT YET RESOLVED*** Levels localStorage does not increment properly on Safari. 
+8. ***NOT YET RESOLVED*** Levels localStorage does not increment properly on Safari. I found a possible [solution](https://github.com/marcuswestin/store.js/) on [Reddit](https://www.reddit.com/r/webdev/comments/7dn7dc/problems_with_localstorage_on_safari/).
 
 ## Deployment
 The website was made by creating and new repository in Github, copying [web url](https://github.com/sabinemm/fruit-game.git) and cloned with built in Git control in Visual Studio Code. Git was used for version control and pushed to a repository [hosted](https://sabinemm.github.io/fruit-game/) on Github pages. 
