@@ -54,8 +54,8 @@ function muteIcon() {
 // **** CARD IMAGES ****
 
 const level1 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/grapefruit_wdcx0h.jpg`,
-    //`https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/dragonfruit_jy5sxt.jpg`,
-    // `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pomegranate_zdesmg.jpg`,
+    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/dragonfruit_jy5sxt.jpg`,
+    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pomegranate_zdesmg.jpg`,
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/Lemon_ei9acy.jpg`];
 
 const level2 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/papaya_s1gxcm.jpg`,
@@ -87,11 +87,11 @@ class MixOrMatch {
         this.timer = document.getElementById('time-remaining');
         this.ticker = document.getElementById('flips');
         this.audioController = new AudioController();
-        this.currentLevel = parseInt(localStorage.getItem('currentLevel'));
+        this.currentLevel = parseInt(window.localStorage.getItem('currentLevel'));
     }
 
     createCards() {
-        const level = parseInt(localStorage.getItem('currentLevel'));
+        const level = parseInt(window.localStorage.getItem('currentLevel'));
 
         let duplicate = [...levels[level], ...levels[level]]; //Rūtas help //duplicates the cards
 
@@ -166,14 +166,13 @@ class MixOrMatch {
 
     levelUp() {
         clearInterval(this.countDown);
-        localStorage.setItem('currentLevel', this.currentLevel + 1);
-        this.currentLevel = this.currentLevel + 1;
+        parseInt(window.localStorage.setItem('currentLevel', this.currentLevel + 1));
+        parseInt(this.currentLevel = this.currentLevel + 1);
         console.log(this.currentLevel);
         if (this.currentLevel > 4) {
             console.log("reached lvl5");
             this.victorious();
-            localStorage.setItem('currentLevel', 1);
-
+            window.localStorage.setItem('currentLevel', 1);
         } else {
             this.audioController.levelUpPing();
             document.getElementById('level-up-text').classList.add('visible');
@@ -273,7 +272,7 @@ function ready() {
         });
     });
 
-    localStorage.setItem('currentLevel', 1); // saves level
+    window.localStorage.setItem('currentLevel', 1); // saves level
 
     let muteButton = document.getElementById('muteButton').addEventListener("click", () => {
         console.log("Mute button clicked.");
@@ -297,4 +296,5 @@ if (document.readyState === 'loading') {
 
 function refreshPage() {
     window.location.reload();
+    //return;
 }

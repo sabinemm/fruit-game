@@ -164,7 +164,8 @@ Current and past errors:
 4. Resolved. When failing with time running out, game moves on to the next level. 
 5. Fixed. Too many papayas on level 2. 
 6. Resolved. Duplicated on level 3 from level 2.
-6. ***NOT YET RESOLVED*** On some browsers/devices the game levels do not function properly. Level Up overlay shows up, but no cards are added to the deck. I parsed the local storage items, because that was the issue with Firefox but the problem still exists on mobile Chrome.
+7. ***NOT YET RESOLVED*** On some browsers/devices the game levels do not function properly. Level Up overlay shows up, but no cards are added to the deck. I parsed the local storage items, because that was the issue with Firefox but the problem still exists on mobile Chrome.
+8. ***NOT YET RESOLVED*** Levels localStorage does not increment properly on Safari. 
 
 ## Deployment
 The website was made by creating and new repository in Github, copying [web url](https://github.com/sabinemm/fruit-game.git) and cloned with built in Git control in Visual Studio Code. Git was used for version control and pushed to a repository [hosted](https://sabinemm.github.io/fruit-game/) on Github pages. 
