@@ -51,7 +51,7 @@ function muteIcon() {
     }
 }
 
-// **** ADDING CARDS TO DECK ****
+// **** CARD IMAGES ****
 
 const level1 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/grapefruit_wdcx0h.jpg`,
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/dragonfruit_jy5sxt.jpg`,
@@ -89,12 +89,13 @@ class MixOrMatch {
     }
 
     createCards() {
-        const level = parseInt(localStorage.getItem('currentLevel')); // || 1;
+        const level = parseInt(localStorage.getItem('currentLevel'));
 
-        let duplicate = [...levels[level], ...levels[level]]; //Rūtas help
+        let duplicate = [...levels[level], ...levels[level]]; //Rūtas help //duplicates the cards
 
         let insertCard = document.getElementById('containerId');
 
+        //creates cards in html
         duplicate.forEach(
             (href) => insertCard.insertAdjacentHTML('beforeend', `<div class="card zoom">
         <div class="card-back card-face">
