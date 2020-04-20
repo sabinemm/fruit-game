@@ -46,7 +46,6 @@ class AudioController {
 
 function muteIcon() {
     if (document.getElementById("muteId").classList.contains('fa-volume-mute')) {
-        console.log("vol up");
         document.getElementById("muteId").classList.toggle('fa-volume-up');
     }
 }
@@ -129,7 +128,6 @@ class MixOrMatch {
 
         setTimeout(() => {
             this.audioController.startMusic();
-            console.log(1111);
             //this.shuffleCards();
             this.countDown = this.startCountDown();
             this.busy = false;
@@ -168,9 +166,7 @@ class MixOrMatch {
         clearInterval(this.countDown);
         parseInt(window.localStorage.setItem('currentLevel', this.currentLevel + 1));
         parseInt(this.currentLevel = this.currentLevel + 1);
-        console.log(this.currentLevel);
         if (this.currentLevel > 4) {
-            console.log("reached lvl5");
             this.victorious();
             window.localStorage.setItem('currentLevel', 1);
         } else {
@@ -204,11 +200,9 @@ class MixOrMatch {
     checkForCardMatch(card) {
         if (this.getCardType(card) === this.getCardType(this.cardToCheck)) {
             this.cardMatch(card, this.cardToCheck);
-            console.log("matched");
             //match
         } else
             this.cardMisMatch(card, this.cardToCheck);
-        console.log("mismatched");   ///matched and mismatched at the same time???
         this.cardToCheck = null;
     }
 
@@ -264,7 +258,6 @@ function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     //let cards = Array.from(document.getElementsByClassName('card'));
     let game = new MixOrMatch(60);  //game time
-    console.log("levelvelvel?")
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
             overlay.classList.remove('visible'); //starts game whenever clicked on overlay
@@ -275,7 +268,6 @@ function ready() {
     window.localStorage.setItem('currentLevel', 1); // saves level
 
     let muteButton = document.getElementById('muteButton').addEventListener("click", () => {
-        console.log("Mute button clicked.");
         if (document.getElementById("muteId").classList.contains('fa-volume-up')) {
             game.mute();
         } else {

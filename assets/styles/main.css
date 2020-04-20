@@ -19,8 +19,8 @@ html {
     color: rgb(245, 6, 85);
     font-family: 'Galada', cursive;
     text-align: center;
-    font-size: 2,5em;
-    margin-block-end: 0;
+    font-size: 2.5em;
+    /* margin-block-end: 0; */
     text-shadow: 2px 2px 4px #a09f9f;
 }
 
@@ -134,9 +134,10 @@ transform: rotateY(-180deg);
     color: rgb(252, 36, 119);
     font-family: 'Galada', cursive;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-
+    -moz-backdrop-filter: blur(10px);
+    -ms-backdrop-filter: blur(10px);
+    -o-backdrop-filter: blur(10px);
   }
 
   .overlay-text:hover {
