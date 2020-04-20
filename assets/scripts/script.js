@@ -163,7 +163,7 @@ class MixOrMatch {
 
     levelUp() {
         clearInterval(this.countDown);
-        localStorage.setItem('currentLevel', this.currentLevel + 1);
+        parseInt(localStorage.setItem('currentLevel', this.currentLevel + 1));
         this.currentLevel = this.currentLevel + 1;
         console.log(this.currentLevel);
         if (this.currentLevel === 5) {
