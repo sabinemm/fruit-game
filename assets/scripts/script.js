@@ -54,8 +54,8 @@ function muteIcon() {
 // **** CARD IMAGES ****
 
 const level1 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/grapefruit_wdcx0h.jpg`,
-    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/dragonfruit_jy5sxt.jpg`,
-    `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pomegranate_zdesmg.jpg`,
+    //`https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/dragonfruit_jy5sxt.jpg`,
+    // `https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/pomegranate_zdesmg.jpg`,
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/Lemon_ei9acy.jpg`];
 
 const level2 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/papaya_s1gxcm.jpg`,

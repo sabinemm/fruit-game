@@ -37,6 +37,8 @@ You can read more about Concentration game visiting [Wikipedia](https://en.wikip
 
 I could choose between 3 different projects and chose to create a memory game because my goal is to learn more about animation and logic. I learned a lot during this project e.g. how to use classes and constructors. Also, I realised my weak areas that require improvement e.g. understanding scope and algorithms. 
 
+Game name idea simply comes from the images I used for the project. 
+
 I would improve a lot of things if I had more time. For example - count the score throughout the game and create a high score board, animate everything in a more appealing way, refine the design, make the game beautifully responsive on all devices.
 
 ## UX
@@ -81,15 +83,16 @@ Features of this website are:
 * "Click To Play Next Level" overlay appears between levels
 * Time countdown
 * Flips are counted throughout the game
+* Several levels
 * "Victory" overlay appears when the game is finished with an option to click to restart 
+* On and off button for background music
 
 ###  Future features
 - [ ] Optional feature to send end score of the game to your email
-- [x] Several levels
 - [ ] Mobile friendly (cards strething accordingly across different screens)
 - [ ] Pause game
+- [ ] Pause audio when page is inactive
 - [ ] "Are you sure you want to give up?" popup if trying to close the page mid game
-- [x] On and off button for background music
 
 ## Technologies used
 Below are a list of the programming languages, technologies and frameworks used for this website.
