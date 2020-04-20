@@ -97,8 +97,10 @@ Below are a list of the programming languages, technologies and frameworks used 
 * HTML5
 * CSS3
 * Vanilla JS
-* Google Fonts
-* Visual Studio Code + Live Server
+* Visual Studio Code 
+    - Live Server Extension
+    - Color Picker
+    - Markdown Preview
 * Git for version control
 * Github to store project
 * Github pages to deploy project
