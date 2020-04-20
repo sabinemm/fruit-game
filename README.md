@@ -139,16 +139,16 @@ Below are a list of the programming languages, technologies and frameworks used 
 * **Adobe XD** to create mockup
 * **[Cloudinary](https://cloudinary.com/)** to store all images
 * **[Favicon.io](https://favicon.io/favicon-converter/)** to convert favicon.ico
+* **[Material.io](https://material.io/resources/icons/?style=baseline)** Mute/unmute icons
 
 ## Testing
 * [HTML validator](https://validator.w3.org/#validate_by_input)
 * [CSS validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 * [JsHint](https://jshint.com)
 
-I used DevTool breakpoints and watches to debug my JS errors in Safari and Chrome.
+I used DevTool breakpoints and watches to debug my JS errors in Safari and Chrome. I used a lot of ```console.log()``` to see if my code us running correctly.
 
-I conducted testing on several platforms and browsers to make sure that game worked properly and looked correct everywhere. I asked friends and peers for their feedback and to send me screenshots of errors they encountered.
-
+I conducted testing on several platforms and browsers to make sure that game worked properly and looked correct everywhere. I asked friends and peers for their feedback and any errors they encountered.
 
 Devices and platforms used for testing:
 
@@ -171,6 +171,9 @@ Devices and platforms used for testing:
     - Firefox
     - Chrome
 * Windows 7
+    - Chrome
+    - Firefox
+* Huawei P20 Pro
     - Chrome
 
 ### Manual testing
@@ -246,5 +249,10 @@ I was initally tempted to create a Snakes and Ladders game. I had downloaded one
 Appreciating my friends Rūta and Agris teaching me how to find and fix errors and giving me hints how to solve problems.
 
 A thanks to my mentor [Maranatha Ilesanmi](https://github.com/mbilesanmi) for helping and guiding me through the process of developing this game. 
+
+### Disclaimer
+
+This project is for educational purposes only.
+
 
 [Back to top ↑](#JUICY-FRUIT-MEMORY-GAME)
