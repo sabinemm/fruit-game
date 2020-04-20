@@ -136,6 +136,11 @@ transform: rotateY(180deg);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+
+  }
+
+  .overlay-text:hover {
+    cursor: pointer;
   }
 
   .instruction-text {
@@ -198,24 +203,11 @@ transform: rotateY(180deg);
 
 .float-button {
     position:fixed;
-    bottom:20px;
-    right:20px;
+    bottom:10%;
+    right:10%;
     color: rgba(0, 0, 0, .5);
     text-align:center;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
     z-index: 200;
+    cursor: pointer;
   }
-
-.picture-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    justify-items: center;
-    grid-gap 5px;
-    grid-row-gap: 0px;
-}
-
-.grid-box img {
-    width: 100%;
-}
-
-}  */
