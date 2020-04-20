@@ -76,16 +76,17 @@ I got rather lucky finding the perfect free fruit vectors. It took only a few mi
 Features of this website are:
 * Game starts with a "Click to start" overlay
 * The cards sligthy increase in size when hovered over
-* Pointer changes to hand when hovered over the cards
-* Cards have different images on front and the same on the back
+* Pointer changes to hand when hovered over the cards and overlays
+* Cards have different images on front and the same pattern on the back
 * Cards flip with the according sound for realism
 * Upbeat sound for moving on to the next level
-* "Click To Play Next Level" overlay appears between levels
-* Time countdown
+* "Woop! Level Up!" and "Click to play next" overlay appears between levels
+* Time countdown - user has 60 seconds to pass each level
 * Flips are counted throughout the game
 * Several levels
 * "Victory" overlay appears when the game is finished with an option to click to restart 
 * On and off button for background music
+* "Game Over" overlay appears when time runs out.
 
 ###  Future features
 - [ ] Optional feature to send end score of the game to your email
@@ -145,6 +146,8 @@ Devices and platforms used for testing:
 * OnePlus 5T
     - Firefox
     - Chrome
+* Windows 7
+    - Chrome
 
 ### Manual testing
 1. Clicking on overlay over the whole page
@@ -161,6 +164,7 @@ Current and past errors:
 4. Resolved. When failing with time running out, game moves on to the next level. 
 5. Fixed. Too many papayas on level 2. 
 6. Resolved. Duplicated on level 3 from level 2.
+6. ***NOT YET RESOLVED*** On some browsers/devices the game levels do not function properly. Level Up overlay shows up, but no cards are added to the deck. I parsed the local storage items, because that was the issue with Firefox but the problem still exists on mobile Chrome.
 
 ## Deployment
 The website was made by creating and new repository in Github, copying [web url](https://github.com/sabinemm/fruit-game.git) and cloned with built in Git control in Visual Studio Code. Git was used for version control and pushed to a repository [hosted](https://sabinemm.github.io/fruit-game/) on Github pages. 
@@ -168,9 +172,28 @@ The website was made by creating and new repository in Github, copying [web url]
 ### How to deploy code locally
 If you wish to run this code locally: 
 
-* Download or clone the code from the Github [repository](https://github.com/sabinemm/fruit-game.git)
+* Download or clone the code from the Github 
 * Click on "Clone or download" to Download ZIP or clone by copying the link
 * Uncompress the ZIP folder to view or clone into VS Code using Source Control and paste the link in "Clone" window
+
+
+1. Go to my GitHub [repository](https://github.com/sabinemm/fruit-game.git) 
+
+2.  Click on 'Clone or download' under the repository name.
+
+3. Copy the clone URL for the repository in the 'Clone with HTTPs section'.
+
+4. Open terminal in your local IDE.
+
+5. Change the current working directory to the location where you want the cloned directory to be made.
+
+6. Paste this into your console:
+
+```git clone https://github.com/sabinemm/fruit-game.git```
+
+Or type  ```git clone``` and paste copied repository link
+
+7. Press Enter to complete
 
 ## Credits
 ### Code
@@ -180,7 +203,7 @@ If you wish to run this code locally:
 * [Maranatha Ilesanmi](https://github.com/mbilesanmi) helping me with setting up local storage for levels 
 * My friend Rūta with helping me to put cards in the constructor 
 * [OnClick refresh](https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click)
-* Several CI student ReadMe files as examples for my project writeup
+* Several CI student ReadMe files as examples for my project writeup. (First example was no longer available. Here is the [second](https://github.com/hebs87/simon-milestone-project-two/blob/master/README.md).)
 
 ### Images
 * [Fruit composition](https://www.freepik.com/free-vector/tropical-fruits-4-colorful-compositions-set_3791460.htm#page=2&query=fruits++mango&position=34)
