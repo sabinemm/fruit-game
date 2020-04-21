@@ -107,20 +107,20 @@ I got rather lucky finding the perfect free fruit vectors. It took only a few mi
 ## Features
 ### Functionality
 
-* Game starts with a "Click to start" overlay
-* The cards sligthy increase in size when hovered over
-* Pointer changes to hand when hovered over the cards and overlays
-* Cards have different images on front and the same pattern on the back
-* Cards flip with the according sound for realism
-* Upbeat sound for moving on to the next level
-* "Woop! Level Up!" and "Click to play next" overlay appears between levels
-* Time countdown - user has 60 seconds to pass each level
-* Flips are counted throughout the game
-* Several levels
-* "Victory" overlay appears when the game is finished with an option to click to restart 
+* Game starts with a "Click to start" overlay.
+* The cards sligthy increase in size when hovered over.
+* Pointer changes to hand when hovered over the cards and overlays.
+* Cards have different images on front and the same pattern on the back.
+* Cards flip with the according sound for realism.
+* Upbeat sound for moving on to the next level.
+* "Woop! Level Up!" and "Click to play next" overlay appears between levels.
+* Time countdown - user has 60 seconds to pass each level.
+* Flips are counted throughout the game.
+* Several levels.
+* "Victory" overlay appears when the game is finished with an option to click to restart.
 * "Game Over" overlay appears when time runs out.
 * The page refreshes when clicked on Game Over or Victory overlay.
-* It is not possible to see all the cards at the same time. If player clicks on one card, it stays flipped. When clicking on a second card it flips and both cards then turn back.
+* It is not possible to see all the cards at the same time. If player clicks on one card, it stays flipped. When clicking on a second card it flips and both cards then turn back if it is not a match.
 
 ###  Existing features
 
@@ -157,10 +157,10 @@ Below are a list of the programming languages, technologies, frameworks and reso
 * **Github pages** to deploy project
 * **Markdown** (README.md file)
 * **[Google Fonts](https://fonts.google.com)**
-* **Google Chrome** developer tools
+* **Google Chrome** Developer tools
 * **Firefox** Inspector
 * **Safari** Web Inspector 
-* **[Procreate](https://procreate.art)** on iPad (mockup drawing)
+* **[Procreate](https://procreate.art)** on iPad - initial mockup drawing
 * **Adobe Photoshop CC** to create cards
 * **Adobe Illustrator CC** importing & editing fruit vectors
 * **Adobe XD** to create mockup and prototype
@@ -246,6 +246,8 @@ CSS validator shows some warnings about alphabetical order and non-standard vend
 It is hard to finish the game on smaller screens due to necesarry scrolling with current styling. I might adress this issue at a later date.
 
 Branch **second** <img src="https://cloud.githubusercontent.com/assets/1544760/7976087/b58bbe3e-0a76-11e5-8d0d-7a5c1bc7f730.gif"> contains the code I followed from tutorial with less of my own changes, but which I want to keep as a reference. 
+
+I chose to do the project in Vanilla JS to properly understand the basics. I learned a lot during development of this game. The most challenging was to understand JS Class,  Constructor and Scope.
 
 ## Deployment
 The project was made by creating and new repository in Github, copying [web url](https://github.com/sabinemm/fruit-game.git) and cloned by pasting the link in Visual Studio Code built-in Git control. Git was used for version control and pushed to a repository hosted on [Github pages](https://sabinemm.github.io/fruit-game/)
