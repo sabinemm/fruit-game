@@ -50,7 +50,7 @@ function muteIcon() {
     }
 }
 
-/* CARD IMAGES  */
+/* CARD FRONT IMAGES  */
 
 const level1 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045889/fruit_game/cards/grapefruit_wdcx0h.jpg`,
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/dragonfruit_jy5sxt.jpg`,
@@ -94,7 +94,7 @@ class MixOrMatch {
 
         let insertCard = document.getElementById('containerId');
 
-        //creates cards in html and let duplicate creates doubles
+        //creates cards in html and let duplicate creates doubles. contains card back image and classes for styling
         duplicate.forEach(
             (href) => insertCard.insertAdjacentHTML('beforeend', `<div class="card zoom">
         <div class="card-back card-face">

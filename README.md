@@ -165,7 +165,7 @@ Below are a list of the programming languages, technologies, frameworks and reso
 * **[Cloudinary](https://cloudinary.com/)** to store all images
 * **[Favicon.io](https://favicon.io/favicon-converter/)** to convert favicon.ico
 * **[Material.io](https://material.io/resources/icons/?style=baseline)** Mute/unmute icons
-* **Adobe Premiere** to make gameplay video
+* **Adobe Premiere** to edit gameplay video
 * **[EZGIF](https://ezgif.com/video-to-gif)** to convert video to GIF for ReadMe file
 * **[Fisher–Yates shuffle](https://en.wikipedia.org/wiki/Fisher–Yates_shuffle)** to shuffle the cards
 
@@ -215,20 +215,21 @@ I had planned to use Jasmine  for automated testing but due to time constraints 
 
 ### Errors
 Current errors:
-1.  ***NOT YET FIXED*** The first error I encountered was with Safari (on all devices) while turning cards. [Click here to see video](https://res.cloudinary.com/www-madine-se/video/upload/v1585779094/fruit_game/safari-error-fruit-game_am8yt1.mov). During the animation of card turning it glitches and half of the other side is visible during animation. I added -webkit- etc to transform styles but it did not solve the issue. By googling I found that many other people have run into this issue. I did not want to spend too much time on time trying to fix it at the moment.
-2. ***NOT YET FIXED*** On some browsers/devices the game levels do not function properly. Level Up overlay shows up, but no cards are added to the deck. I parsed the local storage items, because that was the issue with Firefox but the problem still exists on mobile Chrome.
-3. ***NOT YET FIXED*** Levels localStorage does not increment properly on Safari. I found a possible [solution](https://github.com/marcuswestin/store.js/) on [Reddit](https://www.reddit.com/r/webdev/comments/7dn7dc/problems_with_localstorage_on_safari/) or using a variable instead.
-3. ***NOT YET FIXED*** Backdrop blur does appear on some devices
+
+1. ***NOT YET FIXED*** Backdrop blur does appear on some devices, even though i've added webkit
 
 Resolved errors:
-1. Deployed website on Github pages opened on Safari sometimes lets match not actually matching cards. 
+1. Deployed website on Github pages opened on Safari sometimes lets match not actually matching cards. Had missed a line of code
 2. Reaching level two, cards duplicate function called twice.
 3. When failing with time running out, game moves on to the next level. 
-4. Too many papayas on level 2. 
-5. Duplicated on level 3 from level 2.
+4. Too many papayas on level 2. LocalStorage issue
+5. Duplicated on level 3 from level 2. LocalStorage issue
+6. Levels localStorage does not increment properly on Safari. I found a possible [solution](https://github.com/marcuswestin/store.js/) on [Reddit](https://www.reddit.com/r/webdev/comments/7dn7dc/problems_with_localstorage_on_safari/). Fixed by just storing the level in a variable.
+7. On some browsers/devices the game levels do not function properly. Level Up overlay shows up, but no cards are added to the deck. I parsed the local storage items, because that was the issue with Firefox but the problem still exists on mobile Chrome. Fixed by storing the level in a variable.
+8. The first error I encountered was with Safari (on all devices) while turning cards. [Click here to see video](https://res.cloudinary.com/www-madine-se/video/upload/v1585779094/fruit_game/safari-error-fruit-game_am8yt1.mov). During the animation of card turning it glitches and half of the other side is visible during animation. I added -webkit- etc to transform styles but it did not solve the issue. By googling I found that many other people have run into this issue. Fixed by adding ```-webkit-backface-visibility: hidden;```
 
 ## Deployment
-The website was made by creating and new repository in Github, copying [web url](https://github.com/sabinemm/fruit-game.git) and cloned with built in Git control in Visual Studio Code. Git was used for version control and pushed to a repository [hosted](https://sabinemm.github.io/fruit-game/) on Github pages. 
+The project was made by creating and new repository in Github, copying [web url](https://github.com/sabinemm/fruit-game.git) and cloned by pasting the link in Visual Studio Code built-in Git control. Git was used for version control and pushed to a repository hosted on [Github pages](https://sabinemm.github.io/fruit-game/)
 
 ### How to deploy code locally
 If you wish to run this code locally: 
@@ -247,7 +248,9 @@ If you wish to run this code locally:
 
 Or paste this into your console:
 
-```git clone https://github.com/sabinemm/fruit-game.git```
+```
+git clone https://github.com/sabinemm/fruit-game.git
+```
 
 7. Press Enter to complete
 
@@ -278,6 +281,8 @@ Or paste this into your console:
 ## Acknowledgements
 
 I acknowledge that inline onclick events are not best practice, and should be handled in script file, but I found it less time consuming at the moment and might correct at a later point and will not use them in the same way in future projects.
+
+This project is not supported on InternetExplorer because of JavaScript ES6.
 
 Appreciating my friends Rūta and Agris teaching me how to find and fix errors and giving me hints how to solve problems.
 

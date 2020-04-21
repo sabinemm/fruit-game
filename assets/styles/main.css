@@ -102,6 +102,9 @@ transform: rotateY(-180deg);
     align-items: center;
     overflow: hidden;
     backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     transition: transform 500ms ease-in-out;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
