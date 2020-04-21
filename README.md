@@ -120,6 +120,7 @@ I got rather lucky finding the perfect free fruit vectors. It took only a few mi
 * "Victory" overlay appears when the game is finished with an option to click to restart 
 * "Game Over" overlay appears when time runs out.
 * The page refreshes when clicked on Game Over or Victory overlay.
+* It is not possible to see all the cards at the same time. If player clicks on one card, it stays flipped. When clicking on a second card it flips and both cards then turn back.
 
 ###  Existing features
 
@@ -218,12 +219,12 @@ Devices and platforms used for testing:
 9. Instructions are clear.
 10. Testing if all content is visible on different size screens.
 
-I had planned to use Jasmine  for automated testing but due to time constraints I was not able to. Yet.
+I had planned to use Jasmine for automated testing but due to time constraints I was not able to. Yet.
 
 ### Errors
 Current errors:
 
-1. ***NOT YET FIXED*** Backdrop blur does appear on some devices, even though i've added webkit
+1. ***NOT YET FIXED*** Backdrop blur does appear on some devices, even though I've added vendor prefixes.
 
 Resolved errors:
 1. Deployed website on Github pages opened on Safari sometimes lets match not actually matching cards. Had missed a line of code
@@ -244,6 +245,7 @@ CSS validator shows some warnings about alphabetical order and non-standard vend
 
 It is hard to finish the game on smaller screens due to necesarry scrolling with current styling. I might adress this issue at a later date.
 
+Branch **second** <img src="https://cloud.githubusercontent.com/assets/1544760/7976087/b58bbe3e-0a76-11e5-8d0d-7a5c1bc7f730.gif"> contains the code I followed from tutorial with less of my own changes, but which I want to keep as a reference. 
 
 ## Deployment
 The project was made by creating and new repository in Github, copying [web url](https://github.com/sabinemm/fruit-game.git) and cloned by pasting the link in Visual Studio Code built-in Git control. Git was used for version control and pushed to a repository hosted on [Github pages](https://sabinemm.github.io/fruit-game/)
