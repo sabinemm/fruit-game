@@ -2,17 +2,19 @@
 
 class AudioController {
     constructor() {
-        this.bgMusic = new Audio('assets/audio/bgAudio.mp3');
-        this.flipSound = new Audio('assets/audio/Card-flip-sound-effect.mp3');
+        this.bgMusic = new Audio('assets/audio/background-audio.mp3');
+        this.flipSound = new Audio('assets/audio/card-flip.mp3');
         this.matchSound = new Audio('assets/audio/matched.mp3');
         this.levelUpSound = new Audio('assets/audio/level-up.mp3');
         this.victorySound = new Audio('assets/audio/victory.mp3');
         this.gameOverSound = new Audio('assets/audio/game-over.mp3');
-        this.gameOverSound.volume = 0.5;
+        this.gameOverSound.volume = 0.5; // Reduced volumes to not be annoying if user is listening to something else in background
         this.levelUpSound.volume = 0.5;
-        this.flipSound.volume = 0.4;
-        this.bgMusic.volume = 1;
-        this.bgMusic.loop = true;
+        this.victorySound.volume = 0.5;
+        this.matchSound.volume = 0.5;
+        this.flipSound.volume = 0.3;
+        this.bgMusic.volume = 0.8;
+        this.bgMusic.loop = true; // so that if player is between levels the audio does not stop
     }
     startMusic() {
         this.bgMusic.play();
@@ -66,7 +68,7 @@ const level3 = [`https://res.cloudinary.com/www-madine-se/image/upload/v15850458
 const level4 = [`https://res.cloudinary.com/www-madine-se/image/upload/v1585045890/fruit_game/cards/passionfruit_c9oa7w.jpg`,
     `https://res.cloudinary.com/www-madine-se/image/upload/v1585045888/fruit_game/cards/mango_vtic6q.jpg`];
 
-//rūtas code snippet to solve adding cards on next level
+//Rūtas code snippet to solve adding cards on next level
 const levels = {
     1: level1,
     2: level2,
@@ -110,7 +112,7 @@ class MixOrMatch {
 
         cards.forEach(card => {
             card.addEventListener('click', () => {
-                this.flipCard(card); //whenever clicked on a card
+                this.flipCard(card);
             });
         });
 
@@ -193,9 +195,9 @@ class MixOrMatch {
 
     checkForCardMatch(card) {
         if (this.getCardType(card) === this.getCardType(this.cardToCheck)) {
-            this.cardMatch(card, this.cardToCheck); //card match   
+            this.cardMatch(card, this.cardToCheck);
         } else
-            this.cardMisMatch(card, this.cardToCheck); // mismatch
+            this.cardMisMatch(card, this.cardToCheck);
         this.cardToCheck = null;
     }
 

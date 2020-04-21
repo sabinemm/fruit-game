@@ -225,9 +225,11 @@ I had planned to use Jasmine for automated testing but due to time constraints I
 Current errors:
 
 1. ***NOT YET FIXED*** Backdrop blur does appear on some devices, even though I've added vendor prefixes.
+2. ***NOT YET FIXED*** There is half a second of extra cards visible after clicking Victory or Game Over overlay before the page reloads.
+3. ***NOT YET FIXED*** If player matches or flips cards too fast, second Match sound does not get played, because the first signal is already "busy".
 
 Resolved errors:
-1. Deployed website on Github pages opened on Safari sometimes lets match not actually matching cards. Had missed a line of code
+1. Deployed website on Github pages opened on Safari sometimes lets match not actually matching cards. Had missed a line of code.
 2. Reaching level two, cards duplicate function called twice.
 3. When failing with time running out, game moves on to the next level. 
 4. Too many papayas on level 2. LocalStorage issue
@@ -244,6 +246,8 @@ This project is not supported on Internet Explorer because of JavaScript ES6 syn
 CSS validator shows some warnings about alphabetical order and non-standard vendor prefixes.
 
 It is hard to finish the game on smaller screens due to necesarry scrolling with current styling. I might adress this issue at a later date.
+
+I did not provide alt atributes for visually impaired, because it would unnecessarily complicate the code and I don' t think that this would be a suitable game for visually impaired with the current design and layout. It would require completely different structure. 
 
 Branch **second** <img src="https://cloud.githubusercontent.com/assets/1544760/7976087/b58bbe3e-0a76-11e5-8d0d-7a5c1bc7f730.gif"> contains the code I followed from tutorial with less of my own changes, but which I want to keep as a reference. 
 
