@@ -25,13 +25,14 @@ Play the game</a></p>
 - [**Testing**](#Testing)
     - [Manual testing](#Testing)
     - [Errors](#Errors)
+- [**Code Notes**](#Code-Notes )
 - [**Deployment**](#Deployment)
 - [**Credits**](#Deployment)
     - [Code](#Code)
      - [Images](#Images)
      - [Audio](#Audio)
 - [**Acknowledgements**](#Acknowledgements)
-- [Disclaimer](#Disclaimer)
+- [**Disclaimer**](#Disclaimer)
 ## About
 
 The purpose of this project was to create and build a single page application - classical card matching game that that increases in complexity over the course of the game. It requires observation, concentration and a good memory to win. The game is also known as Concentration, Pelmanism, Shinkei-suijaku, Pexeso and Pairs.
@@ -82,7 +83,7 @@ Most versions had square or rectangular cards. Many versions of the game had ext
 * Starting with a desktop first approach I created a very basic wireframe. [Wireframe and notes](https://res.cloudinary.com/www-madine-se/image/upload/v1585001794/fruit_game/Untitled_Artwork_2_zccka0.jpg) from first mentor call. 
 
 * Interactive Adobe XD [prototype](https://xd.adobe.com/spec/7b9cb5c9-c6f7-4647-7e5f-4a64a4b353b3-0dad/) 
-* [Screenshot](https://res.cloudinary.com/www-madine-se/image/upload/v1587419045/fruit_game/Screenshot_2020-04-20_at_23.43.23_qnslkb.png) (page and overlays in same file for simplicity).
+* [Screenshot](https://res.cloudinary.com/www-madine-se/image/upload/v1587419045/fruit_game/Screenshot_2020-04-20_at_23.43.23_qnslkb.png) - page and overlays in same file for simplicity
 
 * [Start game](https://res.cloudinary.com/www-madine-se/image/upload/v1587419325/fruit_game/Start_game_overlay_den4to.png)
 * [Level 1](https://res.cloudinary.com/www-madine-se/image/upload/v1587419325/fruit_game/level_1_rxvm5e.png)
@@ -173,6 +174,7 @@ Below are a list of the programming languages, technologies, frameworks and reso
 * [HTML validator](https://validator.w3.org/#validate_by_input)
 * [CSS validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 * [JsHint](https://jshint.com)
+* Testing [checklist](https://geteasyqa.com/qa/test-website/)
 
 I used DevTool breakpoints and watches to debug my JS errors in Safari and Chrome. I used a lot of ```console.log()``` to see if my code us running correctly.
 
@@ -185,10 +187,10 @@ Devices and platforms used for testing:
     - Chrome
     - Brave
 * Ipad Pro 12.9" 2018
-    - Safari
+    - Safari 
     - Chrome
 * MacBook Pro 13" MacOS Catalina
-    - Safari
+    - Safari 
     - Chrome
     - Firefox
 * MacBook Pro 13" Windows 10
@@ -208,8 +210,13 @@ Devices and platforms used for testing:
 1. Clicking on overlay over the whole window area.
 2. Turning all cards, clicking on all cards fast.
 3. Turning background audio on and off by clicking mute button.
-4. Letting the timer run out to check if Game Over overlay appears.
-5. Playing the game until Victory overlay appears.
+4. Letting timer run out to check if Game Over overlay appears.
+5. Playing game until Victory overlay appears.
+6. Clicking on  mute button to see if it toggles correctly.
+7. Clicking on mute button to hear if it turns the sound on and off.
+8. Checking there are no grammar and spelling mistakes
+9. Instructions are clear.
+10. Testing if all content is visible on different size screens.
 
 I had planned to use Jasmine  for automated testing but due to time constraints I was not able to. Yet.
 
@@ -227,12 +234,21 @@ Resolved errors:
 6. Levels localStorage does not increment properly on Safari. I found a possible [solution](https://github.com/marcuswestin/store.js/) on [Reddit](https://www.reddit.com/r/webdev/comments/7dn7dc/problems_with_localstorage_on_safari/). Fixed by just storing the level in a variable.
 7. On some browsers/devices the game levels do not function properly. Level Up overlay shows up, but no cards are added to the deck. I parsed the local storage items, because that was the issue with Firefox but the problem still exists on mobile Chrome. Fixed by storing the level in a variable.
 8. The first error I encountered was with Safari (on all devices) while turning cards. [Click here to see video](https://res.cloudinary.com/www-madine-se/video/upload/v1585779094/fruit_game/safari-error-fruit-game_am8yt1.mov). During the animation of card turning it glitches and half of the other side is visible during animation. I added -webkit- etc to transform styles but it did not solve the issue. By googling I found that many other people have run into this issue. Fixed by adding ```-webkit-backface-visibility: hidden;```
+## Code Notes 
+
+I acknowledge that inline onclick events are not best practice, and should be handled in script file, but I found it less time consuming at the moment and might correct at a later point and will not use them in the same way in future projects.
+
+This project is not supported on Internet Explorer because of JavaScript ES6 syntax use.
+
+CSS validator shows some warnings about alphabetical order and non-standard vendor prefixes.
+
+It is hard to finish the game on smaller screens due to necesarry scrolling with current styling. I might adress this issue at a later date.
+
 
 ## Deployment
 The project was made by creating and new repository in Github, copying [web url](https://github.com/sabinemm/fruit-game.git) and cloned by pasting the link in Visual Studio Code built-in Git control. Git was used for version control and pushed to a repository hosted on [Github pages](https://sabinemm.github.io/fruit-game/)
 
-### How to deploy code locally
-If you wish to run this code locally: 
+### How to deploy code locally:
 
 1. Go to my GitHub [repository](https://github.com/sabinemm/fruit-game.git) 
 
@@ -279,10 +295,6 @@ git clone https://github.com/sabinemm/fruit-game.git
 * [Background audio](https://www.zapsplat.com/music/forest-environment-ambience-clearing-spring-summer-birds/)
 
 ## Acknowledgements
-
-I acknowledge that inline onclick events are not best practice, and should be handled in script file, but I found it less time consuming at the moment and might correct at a later point and will not use them in the same way in future projects.
-
-This project is not supported on InternetExplorer because of JavaScript ES6.
 
 Appreciating my friends Rūta and Agris teaching me how to find and fix errors and giving me hints how to solve problems.
 
