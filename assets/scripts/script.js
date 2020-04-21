@@ -84,11 +84,11 @@ class MixOrMatch {
         this.timer = document.getElementById('time-remaining');
         this.ticker = document.getElementById('flips');
         this.audioController = new AudioController();
-        this.currentLevel = parseInt(window.localStorage.getItem('currentLevel'));
+        this.currentLevel = 1;
     }
 
     createCards() {
-        const level = parseInt(window.localStorage.getItem('currentLevel'));
+        const level = this.currentLevel;
 
         let duplicate = [...levels[level], ...levels[level]]; //Rūtas help //duplicates the cards because it needs two cards for there to be a match
 
@@ -159,11 +159,10 @@ class MixOrMatch {
 
     levelUp() {
         clearInterval(this.countDown);
-        parseInt(window.localStorage.setItem('currentLevel', this.currentLevel + 1));
-        parseInt(this.currentLevel = this.currentLevel + 1);
+        this.currentLevel = this.currentLevel + 1
         if (this.currentLevel > 4) {
             this.victorious();
-            window.localStorage.setItem('currentLevel', 1);
+            this.currentLevel = 1;
         } else {
             this.audioController.levelUpPing();
             document.getElementById('level-up-text').classList.add('visible');
@@ -256,8 +255,6 @@ function ready() {
             game.startGame();
         });
     });
-
-    window.localStorage.setItem('currentLevel', 1); // saves level
 
     let muteButton = document.getElementById('muteButton').addEventListener("click", () => {
         if (document.getElementById("muteId").classList.contains('fa-volume-up')) {
