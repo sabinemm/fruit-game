@@ -280,5 +280,4 @@ if (document.readyState === 'loading') {
 
 function refreshPage() {
     window.location.reload();
-    //return;
 }

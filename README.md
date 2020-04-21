@@ -217,7 +217,7 @@ I had planned to use Jasmine  for automated testing but due to time constraints 
 Current errors:
 1.  ***NOT YET FIXED*** The first error I encountered was with Safari (on all devices) while turning cards. [Click here to see video](https://res.cloudinary.com/www-madine-se/video/upload/v1585779094/fruit_game/safari-error-fruit-game_am8yt1.mov). During the animation of card turning it glitches and half of the other side is visible during animation. I added -webkit- etc to transform styles but it did not solve the issue. By googling I found that many other people have run into this issue. I did not want to spend too much time on time trying to fix it at the moment.
 2. ***NOT YET FIXED*** On some browsers/devices the game levels do not function properly. Level Up overlay shows up, but no cards are added to the deck. I parsed the local storage items, because that was the issue with Firefox but the problem still exists on mobile Chrome.
-3. ***NOT YET FIXED*** Levels localStorage does not increment properly on Safari. I found a possible [solution](https://github.com/marcuswestin/store.js/) on [Reddit](https://www.reddit.com/r/webdev/comments/7dn7dc/problems_with_localstorage_on_safari/).
+3. ***NOT YET FIXED*** Levels localStorage does not increment properly on Safari. I found a possible [solution](https://github.com/marcuswestin/store.js/) on [Reddit](https://www.reddit.com/r/webdev/comments/7dn7dc/problems_with_localstorage_on_safari/) or using a variable instead.
 3. ***NOT YET FIXED*** Backdrop blur does appear on some devices
 
 Resolved errors:
